@@ -371,7 +371,7 @@
     <div id="intro-overlay">
         <div class="star"></div>
         <div class="intro-content">
-            <img src="./mic_cheque_logo.png" alt="MIC CHEQUE Logo" class="intro-logo">
+            <img src="./miccheque_logo.png" alt="MIC CHEQUE Logo" class="intro-logo">
             <div class="intro-text">Mic Cheque</div>
         </div>
     </div>
@@ -387,7 +387,7 @@
 
     <header>
         <div class="logo-container">
-            <img src="./mic_cheque_logo.png" alt="MIC CHEQUE Logo">
+            <img src="./miccheque_logo.png" alt="MIC CHEQUE Logo">
         </div>
         <h1 class="site-title">MIC CHEQUE</h1>
         <p class="site-tagline">The Art of the Untold Story</p>
@@ -430,7 +430,7 @@
         <!-- Distinct Professional Separator -->
         <div class="story-separator">
             <div class="separator-icon">
-                <img src="./mic_cheque_logo.png" alt="Separator">
+                <img src="./miccheque_logo.png" alt="Separator">
             </div>
         </div>
 

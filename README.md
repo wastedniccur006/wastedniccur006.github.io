@@ -116,6 +116,16 @@
             margin-bottom: 1.5rem;
         }
 
+        .post-content p::first-letter {
+            float: left;
+            font-size: 4rem;
+            line-height: 1;
+            font-weight: bold;
+            margin-right: 12px;
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+        }
+
         /* Media styling */
         .post-media {
             margin: 2.5rem 0;
@@ -305,7 +315,7 @@
                 <p>For outsiders, it may look chaotic. For locals, it is structured chaos with rhythm and identity. It represents survival, creativity, and movement all at once. Matatus are not just part of Nairobi—they are Nairobi in motion.</p>
                 
                 <div class="post-media">
-                    <video controls style="width:100%; max-width:800px;">
+                    <video autoplay loop muted playsinline style="width:100%; max-width:800px; pointer-events: none;">
                         <source src="./matatu_culture_video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>

@@ -89,6 +89,7 @@
             max-width: 300px;
             margin-bottom: 2rem;
             filter: drop-shadow(0 0 30px rgba(197, 160, 89, 0.6));
+            mix-blend-mode: screen;
         }
 
         .intro-text {
@@ -154,6 +155,7 @@
             height: auto;
             margin-bottom: 2rem;
             filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+            mix-blend-mode: screen;
         }
 
         h1.site-title {
@@ -255,7 +257,7 @@
             width: 60px;
             height: auto;
             opacity: 0.6;
-            filter: invert(1) brightness(0.8);
+            mix-blend-mode: screen;
         }
 
         /* Media styling */

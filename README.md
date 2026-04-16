@@ -9,9 +9,9 @@
         :root {
             --primary-color: #1a1a1a;
             --accent-color: #c5a059;
-            --text-color: #333333;
-            --bg-color: #ffffff;
-            --card-bg: #f9f9f7;
+            --text-color: #e0e0e0;
+            --bg-color: #0a0a0a;
+            --card-bg: #151515;
             --font-heading: 'Playfair Display', serif;
             --font-display: 'Cinzel Decorative', serif;
             --font-body: 'Lora', serif;
@@ -31,6 +31,11 @@
             line-height: 1.8;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
+        }
+
+        /* Prevent scrolling when loading */
+        body.loading {
+            overflow: hidden;
         }
 
         /* Introduction Overlay Styles */
@@ -109,10 +114,10 @@
         .top-nav {
             position: sticky;
             top: 0;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #222;
             padding: 1rem 0;
         }
 
@@ -125,7 +130,7 @@
 
         .top-nav a {
             text-decoration: none;
-            color: var(--primary-color);
+            color: #fff;
             font-family: var(--font-accent);
             font-size: 0.7rem;
             font-weight: 600;
@@ -141,24 +146,24 @@
         header {
             padding: 6rem 1rem 4rem;
             text-align: center;
-            background: linear-gradient(to bottom, #fff, #f4f4f4);
+            background: linear-gradient(to bottom, #0a0a0a, #151515);
         }
 
         .logo-container img {
             max-width: 400px;
             height: auto;
             margin-bottom: 2rem;
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
         }
 
         h1.site-title {
             font-family: var(--font-display);
             font-size: clamp(3rem, 8vw, 5.5rem);
             font-weight: 900;
-            color: var(--primary-color);
+            color: #fff;
             letter-spacing: 6px;
             margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 0px #fff, 4px 4px 0px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 0px #000, 4px 4px 0px rgba(197, 160, 89, 0.2);
             text-transform: uppercase;
         }
 
@@ -179,10 +184,11 @@
 
         /* Modern Story Layout */
         .post {
-            background: white;
+            background: var(--card-bg);
             padding: 4rem;
             border-radius: 8px;
             margin-bottom: 4rem;
+            border: 1px solid #222;
         }
 
         .post-title {
@@ -191,8 +197,8 @@
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 2.5rem;
-            color: var(--primary-color);
-            text-shadow: 1px 1px 0px #fff, 2px 2px 0px rgba(0,0,0,0.05);
+            color: #fff;
+            text-shadow: 1px 1px 0px #000, 2px 2px 0px rgba(197, 160, 89, 0.1);
             text-align: center;
         }
 
@@ -201,6 +207,7 @@
             text-align: justify;
             max-width: 800px;
             margin: 0 auto;
+            color: #ccc;
         }
 
         .post-content p {
@@ -232,7 +239,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(to right, transparent, #ddd, transparent);
+            background: linear-gradient(to right, transparent, #333, transparent);
             z-index: 1;
         }
 
@@ -248,6 +255,7 @@
             width: 60px;
             height: auto;
             opacity: 0.6;
+            filter: invert(1) brightness(0.8);
         }
 
         /* Media styling */
@@ -259,16 +267,18 @@
         .post-media img, .post-media video {
             max-width: 100%;
             height: auto;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border: 1px solid #333;
         }
 
         /* Subscription Section - Modernized */
         .subscription-section {
-            background-color: var(--primary-color);
+            background-color: #111;
             color: white;
             padding: 6rem 2rem;
             text-align: center;
             margin-top: 4rem;
+            border-top: 1px solid #222;
         }
 
         .subscription-section h2 {
@@ -289,13 +299,15 @@
             justify-content: center;
             max-width: 500px;
             margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .subscribe-form input {
             flex: 1;
             padding: 1.2rem 1.5rem;
             border: none;
+            background: #222;
+            color: #fff;
             font-family: var(--font-body);
             outline: none;
             border-radius: 4px 0 0 4px;
@@ -325,6 +337,7 @@
             text-align: center;
             background-color: #000;
             color: #fff;
+            border-top: 1px solid #222;
         }
 
         .footer-tagline {
@@ -340,9 +353,10 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 4px;
-            color: #444;
+            color: #666;
         }
 
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .post { padding: 2rem 1rem; }
             .post-media { margin: 2rem 0; }
@@ -351,7 +365,7 @@
         }
     </style>
 </head>
-<body>
+<body class="loading">
 
     <!-- Introduction Overlay -->
     <div id="intro-overlay">
@@ -483,6 +497,9 @@
             setTimeout(() => {
                 const intro = document.getElementById('intro-overlay');
                 intro.classList.add('fade-out');
+                
+                // Re-enable scrolling by removing 'loading' class
+                document.body.classList.remove('loading');
                 
                 // Remove from DOM after fade animation is complete (2 seconds)
                 setTimeout(() => {

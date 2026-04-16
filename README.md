@@ -1,0 +1,1 @@
+# wastedniccur006.github.io

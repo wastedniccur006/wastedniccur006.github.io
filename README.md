@@ -3,8 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIC CHEQUE | Professional Storytelling</title>
-    <!-- Classic Font Pairing: Playfair Display for headings, Lora for body, and Montserrat for accents -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Premium Classic Font Pairing: Cinzel Decorative for a regal 3D feel, Playfair for headlines, Lora for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #1a1a1a;
@@ -12,6 +12,7 @@
             --text-color: #333333;
             --bg-color: #fdfdfb;
             --font-heading: 'Playfair Display', serif;
+            --font-display: 'Cinzel Decorative', serif;
             --font-body: 'Lora', serif;
             --font-accent: 'Montserrat', sans-serif;
         }
@@ -43,12 +44,14 @@
         }
 
         h1.site-title {
-            font-family: var(--font-heading);
-            font-size: 3.5rem;
-            font-weight: 700;
+            font-family: var(--font-display);
+            font-size: 5rem;
+            font-weight: 900;
             color: var(--primary-color);
-            letter-spacing: -1px;
+            letter-spacing: 4px;
             margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0px #fff, 4px 4px 0px rgba(0,0,0,0.1), 1px 1px 15px rgba(197, 160, 89, 0.3);
+            text-transform: uppercase;
         }
 
         .site-tagline {
@@ -101,10 +104,13 @@
 
         .post-title {
             font-family: var(--font-heading);
-            font-size: 2.5rem;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 2rem;
             color: var(--primary-color);
+            text-shadow: 1px 1px 0px #fff, 2px 2px 0px rgba(0,0,0,0.05);
+            letter-spacing: -0.5px;
         }
 
         .post-content {
@@ -155,9 +161,10 @@
         }
 
         .subscription-section h2 {
-            font-family: var(--font-heading);
-            font-size: 2rem;
+            font-family: var(--font-display);
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            text-shadow: 1px 1px 0px #fff, 2px 2px 5px rgba(0,0,0,0.05);
         }
 
         .subscription-section p {

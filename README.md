@@ -3,14 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIC CHEQUE | Professional Storytelling</title>
-    <!-- Premium Classic Font Pairing: Cinzel Decorative for a regal 3D feel, Playfair for headlines, Lora for body -->
+    <!-- Premium Classic & Modern Font Pairing -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #1a1a1a;
             --accent-color: #c5a059;
             --text-color: #333333;
-            --bg-color: #fdfdfb;
+            --bg-color: #ffffff;
+            --card-bg: #f9f9f7;
             --font-heading: 'Playfair Display', serif;
             --font-display: 'Cinzel Decorative', serif;
             --font-body: 'Lora', serif;
@@ -31,212 +32,265 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        header {
-            padding: 4rem 1rem 2rem;
-            text-align: center;
+        /* Modern Navigation Bar */
+        .top-nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
             border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+
+        .top-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-family: var(--font-accent);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+
+        .top-nav a:hover {
+            color: var(--accent-color);
+        }
+
+        header {
+            padding: 6rem 1rem 4rem;
+            text-align: center;
+            background: linear-gradient(to bottom, #fff, #f4f4f4);
         }
 
         .logo-container img {
             max-width: 400px;
             height: auto;
             margin-bottom: 2rem;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
         }
 
         h1.site-title {
             font-family: var(--font-display);
-            font-size: 5rem;
+            font-size: clamp(3rem, 8vw, 5.5rem);
             font-weight: 900;
             color: var(--primary-color);
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 0px #fff, 4px 4px 0px rgba(0,0,0,0.1), 1px 1px 15px rgba(197, 160, 89, 0.3);
+            text-shadow: 2px 2px 0px #fff, 4px 4px 0px rgba(0,0,0,0.1);
             text-transform: uppercase;
         }
 
         .site-tagline {
             font-family: var(--font-accent);
             text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 4px;
+            font-size: 0.85rem;
+            letter-spacing: 6px;
             color: var(--accent-color);
             font-weight: 600;
-        }
-
-        nav {
-            margin-top: 2rem;
-            border-top: 1px double #ccc;
-            border-bottom: 1px double #ccc;
-            padding: 1rem 0;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2.5rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-family: var(--font-accent);
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--accent-color);
         }
 
         main {
-            max-width: 800px;
-            margin: 4rem auto;
-            padding: 0 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
         }
 
+        /* Modern Story Layout */
         .post {
-            margin-bottom: 8rem;
+            background: white;
+            padding: 4rem;
+            border-radius: 8px;
+            margin-bottom: 4rem;
+            transition: transform 0.3s ease;
         }
 
         .post-title {
             font-family: var(--font-heading);
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             color: var(--primary-color);
             text-shadow: 1px 1px 0px #fff, 2px 2px 0px rgba(0,0,0,0.05);
-            letter-spacing: -0.5px;
+            text-align: center;
         }
 
         .post-content {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             text-align: justify;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .post-content p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .post-content p::first-letter {
             float: left;
-            font-size: 4rem;
-            line-height: 1;
+            font-size: 4.5rem;
+            line-height: 0.8;
             font-weight: bold;
-            margin-right: 12px;
-            font-family: var(--font-heading);
-            color: var(--primary-color);
+            margin-right: 15px;
+            margin-top: 10px;
+            font-family: var(--font-display);
+            color: var(--accent-color);
+        }
+
+        /* Distinct Professional Separator */
+        .story-separator {
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .story-separator::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            z-index: 1;
+        }
+
+        .separator-icon {
+            background: var(--bg-color);
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+        }
+
+        .separator-icon img {
+            width: 60px;
+            height: auto;
+            opacity: 0.6;
         }
 
         /* Media styling */
         .post-media {
-            margin: 2.5rem 0;
+            margin: 4rem -4rem;
             text-align: center;
         }
 
         .post-media img, .post-media video {
             max-width: 100%;
             height: auto;
-            border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
-        .media-caption {
-            font-family: var(--font-accent);
-            font-size: 0.75rem;
-            color: #888;
-            margin-top: 0.8rem;
-        }
-
+        /* Subscription Section - Modernized */
         .subscription-section {
-            background-color: #f9f9f7;
-            padding: 4rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 6rem 2rem;
             text-align: center;
-            border-top: 1px solid #eee;
-            margin-top: 6rem;
+            margin-top: 4rem;
         }
 
         .subscription-section h2 {
             font-family: var(--font-display);
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 1px 1px 0px #fff, 2px 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
         }
 
         .subscription-section p {
             font-family: var(--font-body);
-            color: #666;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            opacity: 0.8;
         }
 
         .subscribe-form {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            max-width: 450px;
+            gap: 0;
+            max-width: 500px;
             margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .subscribe-form input {
             flex: 1;
-            padding: 0.8rem 1rem;
-            border: 1px solid #ddd;
+            padding: 1.2rem 1.5rem;
+            border: none;
             font-family: var(--font-body);
             outline: none;
+            border-radius: 4px 0 0 4px;
         }
 
         .subscribe-form button {
-            padding: 0.8rem 2rem;
-            background-color: var(--primary-color);
-            color: white;
+            padding: 1.2rem 2.5rem;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
             border: none;
             font-family: var(--font-accent);
             text-transform: uppercase;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 700;
             letter-spacing: 2px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
+            border-radius: 0 4px 4px 0;
         }
 
         .subscribe-form button:hover {
-            background-color: var(--accent-color);
+            background-color: #d4b47a;
         }
 
         footer {
-            padding: 4rem 1rem;
+            padding: 6rem 1rem;
             text-align: center;
-            background-color: var(--primary-color);
+            background-color: #000;
             color: #fff;
         }
 
         .footer-tagline {
-            font-family: var(--font-heading);
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
             color: var(--accent-color);
         }
 
         .copyright {
             font-family: var(--font-accent);
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #666;
+            letter-spacing: 4px;
+            color: #444;
         }
 
-        @media (max-width: 600px) {
-            h1.site-title { font-size: 2.5rem; }
-            nav ul { flex-direction: column; gap: 1rem; }
+        @media (max-width: 768px) {
+            .post { padding: 2rem 1rem; }
+            .post-media { margin: 2rem 0; }
             .subscribe-form { flex-direction: column; }
+            .subscribe-form input, .subscribe-form button { border-radius: 4px; margin-bottom: 10px; }
         }
     </style>
 </head>
 <body>
+
+    <nav class="top-nav">
+        <ul>
+            <li><a href="#">Chronicles</a></li>
+            <li><a href="#">The Vault</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
     <header>
         <div class="logo-container">
@@ -244,15 +298,6 @@
         </div>
         <h1 class="site-title">MIC CHEQUE</h1>
         <p class="site-tagline">The Art of the Untold Story</p>
-        
-        <nav>
-            <ul>
-                <li><a href="#">Chronicles</a></li>
-                <li><a href="#">The Vault</a></li>
-                <li><a href="#">About the Mic</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
@@ -288,6 +333,13 @@
                 </div>
             </div>
         </article>
+
+        <!-- Distinct Professional Separator -->
+        <div class="story-separator">
+            <div class="separator-icon">
+                <img src="./mic_cheque_logo.png" alt="Separator">
+            </div>
+        </div>
 
         <!-- Story 2: Nairobi Matatu Culture -->
         <article class="post">

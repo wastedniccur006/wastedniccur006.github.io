@@ -30,6 +30,56 @@
             font-family: var(--font-body);
             line-height: 1.8;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Introduction Overlay Styles */
+        #intro-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 2s ease, visibility 2s;
+        }
+
+        .intro-content {
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: introFadeIn 3s forwards ease-out;
+        }
+
+        .intro-logo {
+            max-width: 300px;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 0 20px rgba(197, 160, 89, 0.4));
+        }
+
+        .intro-text {
+            font-family: var(--font-display);
+            color: var(--accent-color);
+            font-size: 2rem;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(197, 160, 89, 0.5);
+        }
+
+        @keyframes introFadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .fade-out {
+            opacity: 0 !important;
+            visibility: hidden !important;
         }
 
         /* Modern Navigation Bar */
@@ -110,7 +160,6 @@
             padding: 4rem;
             border-radius: 8px;
             margin-bottom: 4rem;
-            transition: transform 0.3s ease;
         }
 
         .post-title {
@@ -187,7 +236,6 @@
         .post-media img, .post-media video {
             max-width: 100%;
             height: auto;
-            border-radius: 0;
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
@@ -216,7 +264,6 @@
         .subscribe-form {
             display: flex;
             justify-content: center;
-            gap: 0;
             max-width: 500px;
             margin: 0 auto;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -282,6 +329,14 @@
     </style>
 </head>
 <body>
+
+    <!-- Introduction Overlay -->
+    <div id="intro-overlay">
+        <div class="intro-content">
+            <img src="./mic_cheque_logo.png" alt="MIC CHEQUE Logo" class="intro-logo">
+            <div class="intro-text">Mic Cheque</div>
+        </div>
+    </div>
 
     <nav class="top-nav">
         <ul>
@@ -396,6 +451,22 @@
         <p class="footer-tagline">NIKO KADI JE WEWE?</p>
         <p class="copyright">&copy; 2026 MIC CHEQUE. ALL RIGHTS RESERVED.</p>
     </footer>
+
+    <!-- Script to handle Intro Fade Out -->
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Wait for 10 seconds before fading out the intro
+            setTimeout(() => {
+                const intro = document.getElementById('intro-overlay');
+                intro.classList.add('fade-out');
+                
+                // Remove from DOM after fade animation is complete (2 seconds)
+                setTimeout(() => {
+                    intro.style.display = 'none';
+                }, 2000);
+            }, 8000); // 8 seconds of full display + 2 seconds fade = 10 seconds total
+        });
+    </script>
 
 </body>
 </html>

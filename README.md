@@ -47,34 +47,57 @@
             align-items: center;
             z-index: 9999;
             transition: opacity 2s ease, visibility 2s;
+            overflow: hidden;
+        }
+
+        /* Traveling Star Animation */
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px 2px white, 0 0 20px 5px var(--accent-color);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            z-index: 10000;
+            animation: starTravel 6s forwards ease-in;
+        }
+
+        @keyframes starTravel {
+            0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            20% { opacity: 1; }
+            80% { transform: translate(-50%, -50%) scale(50); opacity: 1; filter: blur(2px); }
+            100% { transform: translate(-50%, -50%) scale(200); opacity: 0; }
         }
 
         .intro-content {
             text-align: center;
             opacity: 0;
-            transform: scale(0.9);
-            animation: introFadeIn 3s forwards ease-out;
+            z-index: 10001;
+            animation: logoReveal 4s 3s forwards ease-out;
         }
 
         .intro-logo {
             max-width: 300px;
             margin-bottom: 2rem;
-            filter: drop-shadow(0 0 20px rgba(197, 160, 89, 0.4));
+            filter: drop-shadow(0 0 30px rgba(197, 160, 89, 0.6));
         }
 
         .intro-text {
             font-family: var(--font-display);
             color: var(--accent-color);
-            font-size: 2rem;
-            letter-spacing: 10px;
+            font-size: 2.5rem;
+            letter-spacing: 12px;
             text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(197, 160, 89, 0.5);
+            text-shadow: 0 0 20px rgba(197, 160, 89, 0.8);
         }
 
-        @keyframes introFadeIn {
-            0% { opacity: 0; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.05); }
+        @keyframes logoReveal {
+            0% { opacity: 0; transform: scale(0.9); filter: blur(10px); }
+            100% { opacity: 1; transform: scale(1); filter: blur(0px); }
         }
 
         .fade-out {
@@ -332,6 +355,7 @@
 
     <!-- Introduction Overlay -->
     <div id="intro-overlay">
+        <div class="star"></div>
         <div class="intro-content">
             <img src="./mic_cheque_logo.png" alt="MIC CHEQUE Logo" class="intro-logo">
             <div class="intro-text">Mic Cheque</div>
@@ -455,7 +479,7 @@
     <!-- Script to handle Intro Fade Out -->
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            // Wait for 10 seconds before fading out the intro
+            // Wait for 10 seconds total before fading out the intro
             setTimeout(() => {
                 const intro = document.getElementById('intro-overlay');
                 intro.classList.add('fade-out');
@@ -464,7 +488,7 @@
                 setTimeout(() => {
                     intro.style.display = 'none';
                 }, 2000);
-            }, 8000); // 8 seconds of full display + 2 seconds fade = 10 seconds total
+            }, 10000); 
         });
     </script>
 

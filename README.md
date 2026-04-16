@@ -9,13 +9,17 @@
         :root {
             --primary-color: #1a1a1a;
             --accent-color: #c5a059;
-            --text-color: #333333;
-            --bg-color: #ffffff;
-            --card-bg: #f9f9f7;
+            --text-color: #e0e0e0;
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
             --font-heading: 'Playfair Display', serif;
             --font-display: 'Cinzel Decorative', serif;
             --font-body: 'Lora', serif;
             --font-accent: 'Montserrat', sans-serif;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
         }
 
         * {
@@ -31,6 +35,7 @@
             line-height: 1.8;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
+            transition: background-color 0.3s ease;
         }
 
         /* Introduction Overlay Styles */
@@ -109,10 +114,10 @@
         .top-nav {
             position: sticky;
             top: 0;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(15, 15, 15, 0.98);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #333;
             padding: 1rem 0;
         }
 
@@ -125,7 +130,7 @@
 
         .top-nav a {
             text-decoration: none;
-            color: var(--primary-color);
+            color: var(--text-color);
             font-family: var(--font-accent);
             font-size: 0.7rem;
             font-weight: 600;
@@ -141,7 +146,7 @@
         header {
             padding: 6rem 1rem 4rem;
             text-align: center;
-            background: linear-gradient(to bottom, #fff, #f4f4f4);
+            background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
         }
 
         .logo-container img {
@@ -155,10 +160,10 @@
             font-family: var(--font-display);
             font-size: clamp(3rem, 8vw, 5.5rem);
             font-weight: 900;
-            color: var(--primary-color);
+            color: var(--accent-color);
             letter-spacing: 6px;
             margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 0px #fff, 4px 4px 0px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.5), 4px 4px 0px rgba(197, 160, 89, 0.2);
             text-transform: uppercase;
         }
 
@@ -179,10 +184,11 @@
 
         /* Modern Story Layout */
         .post {
-            background: white;
+            background: #1a1a1a;
             padding: 4rem;
             border-radius: 8px;
             margin-bottom: 4rem;
+            border: 1px solid #333;
         }
 
         .post-title {
@@ -191,8 +197,8 @@
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 2.5rem;
-            color: var(--primary-color);
-            text-shadow: 1px 1px 0px #fff, 2px 2px 0px rgba(0,0,0,0.05);
+            color: var(--accent-color);
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5), 2px 2px 0px rgba(197, 160, 89, 0.15);
             text-align: center;
         }
 
@@ -232,7 +238,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(to right, transparent, #ddd, transparent);
+            background: linear-gradient(to right, transparent, #555, transparent);
             z-index: 1;
         }
 
@@ -242,6 +248,7 @@
             position: relative;
             z-index: 2;
             display: inline-block;
+            filter: brightness(1.2) drop-shadow(0 0 15px rgba(197, 160, 89, 0.5));
         }
 
         .separator-icon img {
@@ -344,7 +351,7 @@
         }
 
         @media (max-width: 768px) {
-            .post { padding: 2rem 1rem; }
+            .post { padding: 2rem; }
             .post-media { margin: 2rem 0; }
             .subscribe-form { flex-direction: column; }
             .subscribe-form input, .subscribe-form button { border-radius: 4px; margin-bottom: 10px; }
@@ -357,7 +364,7 @@
     <div id="intro-overlay">
         <div class="star"></div>
         <div class="intro-content">
-            <img src="./mic_cheque_logo.png" alt="MIC CHEQUE Logo" class="intro-logo">
+            <img src="./miccheque_logo.png" alt="MIC CHEQUE Logo" class="intro-logo">
             <div class="intro-text">Mic Cheque</div>
         </div>
     </div>
@@ -373,7 +380,7 @@
 
     <header>
         <div class="logo-container">
-            <img src="./mic_cheque_logo.png" alt="MIC CHEQUE Logo">
+            <img src="./miccheque_logo.png" alt="MIC CHEQUE Logo">
         </div>
         <h1 class="site-title">MIC CHEQUE</h1>
         <p class="site-tagline">The Art of the Untold Story</p>
@@ -416,7 +423,7 @@
         <!-- Distinct Professional Separator -->
         <div class="story-separator">
             <div class="separator-icon">
-                <img src="./mic_cheque_logo.png" alt="Separator">
+                <img src="./miccheque_logo.png" alt="Separator">
             </div>
         </div>
 
@@ -452,12 +459,6 @@
                 <p>Despite these issues, matatu culture continues to evolve rather than disappear. New designs appear regularly, each trying to push boundaries in creativity and style. The culture has even influenced fashion, music, and digital content creation, becoming a symbol of urban expression.</p>
                 <p>For outsiders, it may look chaotic. For locals, it is structured chaos with rhythm and identity. It represents survival, creativity, and movement all at once. Matatus are not just part of Nairobi—they are Nairobi in motion.</p>
                 
-                <div class="post-media">
-                    <video autoplay loop muted playsinline style="width:100%; max-width:800px; pointer-events: none;">
-                        <source src="./matatu_culture_video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
             </div>
         </article>
     </main>
@@ -476,9 +477,12 @@
         <p class="copyright">&copy; 2026 MIC CHEQUE. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <!-- Script to handle Intro Fade Out -->
+    <!-- Script to handle Intro Fade Out and Scroll Control -->
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
+            // Disable scrolling when page loads
+            document.body.classList.add('no-scroll');
+            
             // Wait for 10 seconds total before fading out the intro
             setTimeout(() => {
                 const intro = document.getElementById('intro-overlay');
@@ -487,6 +491,8 @@
                 // Remove from DOM after fade animation is complete (2 seconds)
                 setTimeout(() => {
                     intro.style.display = 'none';
+                    // Re-enable scrolling after intro is gone
+                    document.body.classList.remove('no-scroll');
                 }, 2000);
             }, 10000); 
         });

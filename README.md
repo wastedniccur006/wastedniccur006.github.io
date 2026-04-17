@@ -1,10 +1,9 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIC CHEQUE | Entertainment & Stories</title>
-    <!-- Premium Classic & Modern Font Pairing -->
+    <title>MIC CHEQUE | Professional Storytelling</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -81,7 +80,7 @@
             font-weight: 600;
         }
 
-        /* Header & Logo - TUKO Style */
+        /* Main Header */
         .main-header {
             background: white;
             padding: 1rem 0;
@@ -128,7 +127,7 @@
             font-weight: 800;
         }
 
-        /* Navigation - TUKO Style */
+        /* Navigation */
         .main-nav {
             background: var(--primary-color);
             padding: 0;
@@ -171,7 +170,7 @@
             color: white;
         }
 
-        /* Main Container */
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -208,16 +207,7 @@
             background: var(--tuko-red);
         }
 
-        .view-all {
-            font-family: var(--font-accent);
-            font-size: 0.8rem;
-            color: var(--tuko-red);
-            text-decoration: none;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        /* Featured Story - Hero Section */
+        /* Featured Story */
         .featured-story {
             display: grid;
             grid-template-columns: 1.2fr 1fr;
@@ -235,8 +225,8 @@
             background: #000;
         }
 
-        .featured-media video,
-        .featured-media img {
+        .featured-media img,
+        .featured-media video {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -326,10 +316,10 @@
             gap: 0.5rem;
         }
 
-        /* Stories Grid - TUKO Style Cards */
+        /* Stories Grid */
         .stories-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
@@ -340,7 +330,6 @@
             overflow: hidden;
             box-shadow: 0 3px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
         }
 
         .story-card:hover {
@@ -350,7 +339,7 @@
 
         .story-image {
             position: relative;
-            height: 200px;
+            height: 220px;
             overflow: hidden;
         }
 
@@ -396,25 +385,17 @@
 
         .story-title {
             font-family: var(--font-heading);
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 700;
             line-height: 1.3;
             margin-bottom: 0.75rem;
             color: var(--primary-color);
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
         }
 
         .story-excerpt {
             font-size: 0.9rem;
             color: #666;
             line-height: 1.5;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
             margin-bottom: 1rem;
         }
 
@@ -427,80 +408,61 @@
             justify-content: space-between;
         }
 
-        /* Two Column Layout */
-        .two-column {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
-        .sidebar-widget {
+        /* Full Story Content */
+        .full-story {
             background: white;
-            padding: 1.5rem;
+            padding: 3rem;
             border-radius: 8px;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             box-shadow: 0 3px 15px rgba(0,0,0,0.08);
         }
 
-        .widget-title {
-            font-family: var(--font-accent);
-            font-size: 1rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--tuko-red);
-        }
-
-        .trending-list {
-            list-style: none;
-        }
-
-        .trending-item {
-            display: flex;
-            gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .trending-item:last-child {
-            border-bottom: none;
-        }
-
-        .trending-number {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--tuko-red);
-            opacity: 0.3;
-            line-height: 1;
-        }
-
-        .trending-content h4 {
+        .full-story-title {
             font-family: var(--font-heading);
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
             color: var(--primary-color);
+            text-align: center;
         }
 
-        .trending-content span {
-            font-family: var(--font-accent);
-            font-size: 0.7rem;
-            color: #999;
-            text-transform: uppercase;
+        .full-story-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
         }
 
-        /* Video Section Special Styling */
+        .full-story-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .full-story-content p::first-letter {
+            float: left;
+            font-size: 4rem;
+            line-height: 0.8;
+            font-weight: bold;
+            margin-right: 15px;
+            margin-top: 10px;
+            font-family: var(--font-display);
+            color: var(--accent-color);
+        }
+
+        .story-media {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .story-media img,
+        .story-media video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* Video Section */
         .video-section {
             background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
             padding: 3rem 0;
@@ -530,7 +492,7 @@
 
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             background: #000;
@@ -693,16 +655,16 @@
                 grid-template-columns: 1fr;
             }
 
-            .two-column {
+            .stories-grid {
                 grid-template-columns: 1fr;
             }
 
-            .sidebar {
-                position: static;
+            .full-story {
+                padding: 2rem 1rem;
             }
 
-            .nav-menu {
-                gap: 0;
+            .full-story-title {
+                font-size: 1.8rem;
             }
 
             .nav-menu a {
@@ -712,14 +674,6 @@
         }
 
         @media (max-width: 600px) {
-            .stories-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .video-grid {
-                grid-template-columns: 1fr;
-            }
-
             .subscribe-form {
                 flex-direction: column;
             }
@@ -728,12 +682,12 @@
 </head>
 <body>
 
-    <!-- TUKO Style Top Bar -->
+    <!-- Top Bar -->
     <div class="top-bar">
         <div class="top-bar-content">
             <div class="breaking-news">
                 <span class="breaking-label">Breaking</span>
-                <span class="ticker-text">Sauti Sol announces reunion concert dates for 2026!</span>
+                <span class="ticker-text">Nairobi Tech Scene Hits Record Investment Numbers!</span>
             </div>
             <div class="date-weather">
                 <span id="current-date"></span>
@@ -748,11 +702,8 @@
                 <img src="./mic_cheque_logo.png" alt="MIC CHEQUE Logo">
                 <div class="site-branding">
                     <h1>MIC CHEQUE</h1>
-                    <span>Entertainment & Stories</span>
+                    <span>Professional Storytelling</span>
                 </div>
-            </div>
-            <div class="social-icons">
-                <!-- Social icons can be added here -->
             </div>
         </div>
     </header>
@@ -762,314 +713,211 @@
         <div class="nav-content">
             <ul class="nav-menu">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Entertainment</a></li>
-                <li><a href="#">Celebrity News</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Culture</a></li>
-                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#tech">Technology</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#innovation">Innovation</a></li>
+                <li><a href="#lifestyle">Lifestyle</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </div>
     </nav>
 
     <main class="container">
 
-        <!-- Featured Story with Fixed Video -->
-        <section class="featured-story">
+        <!-- Featured Story: Nairobi Tech Hustle -->
+        <section class="featured-story" id="tech">
             <div class="featured-media">
-                <!-- FIXED VIDEO: Multiple formats, poster image, proper attributes -->
-                <video 
-                    id="featured-video"
-                    autoplay 
-                    muted 
-                    loop 
-                    playsinline
-                    preload="auto"
-                    poster="./matatu_story_4.jpg"
-                    style="width:100%; height:100%; object-fit:cover;">
-                    <source src="./matatu_culture_video.mp4" type="video/mp4">
-                    <source src="./matatu_culture_video.webm" type="video/webm">
-                    <!-- Fallback message -->
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">
-                    <div class="play-button" onclick="toggleVideo('featured-video')"></div>
-                    <span class="category-tag">Featured Video</span>
-                </div>
+                <img src="./tech_story_1.jpg" alt="Nairobi Tech Innovation">
             </div>
             <div class="featured-content">
-                <span class="category-tag">Entertainment</span>
-                <h2 class="featured-title">Nairobi Matatu Culture: The Moving Art That Never Sleeps</h2>
+                <span class="category-tag">Technology</span>
+                <h2 class="featured-title">Nairobi's Tech Hustle: From Small Rooms to Global Impact</h2>
                 <p class="featured-excerpt">
-                    In the fast-moving urban life of Kenya, few things define daily experience more vividly than the matatu system. 
-                    These minibuses are not just transport—they are a living cultural phenomenon blending art, music, economy, 
-                    and street identity into one moving ecosystem.
+                    In the modern heartbeat of Kenya, Nairobi has grown into one of Africa's most influential 
+                    innovation centers. What once looked like a city focused mainly on trade and administration 
+                    is now home to fast-growing startups and digital creators.
                 </p>
                 <div class="meta-info">
                     <span>📅 April 17, 2026</span>
-                    <span>⏱️ 5 min read</span>
-                    <span>👁️ 12.5K views</span>
+                    <span>⏱️ 8 min read</span>
+                    <span>👁️ 15.2K views</span>
                 </div>
             </div>
         </section>
 
-        <!-- Latest Entertainment Stories -->
+        <!-- Full Story 1: Nairobi Tech Hustle -->
+        <article class="full-story">
+            <h2 class="full-story-title">Nairobi's Tech Hustle: From Small Rooms to Global Impact</h2>
+
+            <div class="full-story-content">
+                <p>In the modern heartbeat of Kenya, Nairobi has grown into one of Africa's most influential innovation centers. What once looked like a city focused mainly on trade and administration is now home to fast-growing startups, digital creators, and software engineers shaping solutions for global markets.</p>
+
+                <p>This transformation did not happen overnight. It started in small internet cafés, university dorm rooms, and cramped rented apartments where young people experimented with code, design, and online business ideas. Many had no formal funding, no advanced equipment, and limited mentorship. What they had was curiosity and persistence.</p>
+
+                <div class="story-media">
+                    <img src="./tech_story_1.jpg" alt="Nairobi Tech Innovation">
+                </div>
+
+                <p>Today, those early experiments have evolved into real companies. Fintech platforms are now handling payments across East Africa. Logistics startups are improving delivery systems for small businesses. Health-tech tools are helping patients in remote areas access medical advice without traveling long distances.</p>
+
+                <p>A major driver of this growth is mobile technology. With widespread smartphone adoption and mobile money systems, developers have been able to build services that reach millions instantly. This has made Kenya one of the most advanced mobile-first economies in the world.</p>
+
+                <div class="story-media">
+                    <img src="./tech_story_2.jpg" alt="Mobile Technology in Kenya">
+                </div>
+
+                <p>However, the journey is still far from easy. Many startups struggle with funding gaps, especially at early stages. Others face infrastructure challenges such as inconsistent internet in certain areas or high operational costs. Competition is also intense, with hundreds of new ideas launched every year.</p>
+
+                <div class="story-media">
+                    <img src="./tech_story_3.jpg" alt="Startups in Nairobi">
+                </div>
+
+                <p>Despite these challenges, the energy remains strong. Incubators and innovation hubs continue to support young talent. Universities are producing more tech graduates than ever before. International investors are increasingly paying attention to Nairobi as a serious tech destination.</p>
+
+                <p>What stands out most is the mindset shift. Young innovators are no longer waiting for jobs—they are building them. They are creating platforms that solve local problems while also competing globally. Nairobi is no longer just participating in the digital economy; it is actively shaping it.</p>
+
+                <div class="story-media">
+                    <img src="./tech_story_4.jpg" alt="Future of Nairobi Tech">
+                </div>
+            </div>
+        </article>
+
+        <!-- Section Header -->
         <div class="section-header">
-            <h3 class="section-title">Latest Entertainment</h3>
-            <a href="#" class="view-all">View All →</a>
+            <h3 class="section-title">More Stories</h3>
         </div>
 
+        <!-- Story Cards Grid -->
         <div class="stories-grid">
-            <!-- Story 1 -->
-            <article class="story-card" onclick="openStory('story1')">
+            <!-- Matatu Culture Card -->
+            <article class="story-card" id="culture">
                 <div class="story-image">
-                    <img src="./tech_story_1.jpg" alt="Entertainment News">
-                    <span class="video-badge">VIDEO</span>
-                </div>
-                <div class="story-content">
-                    <div class="story-category">Celebrity News</div>
-                    <h3 class="story-title">Diamond Platnumz Drops New Album Featuring International Artists</h3>
-                    <p class="story-excerpt">
-                        The Bongo Flava superstar surprised fans with a midnight release featuring collaborations 
-                        with artists from Nigeria, South Africa, and the US.
-                    </p>
-                    <div class="story-meta">
-                        <span>2 hours ago</span>
-                        <span>💬 234 comments</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Story 2 -->
-            <article class="story-card" onclick="openStory('story2')">
-                <div class="story-image">
-                    <img src="./tech_story_2.jpg" alt="Entertainment News">
-                </div>
-                <div class="story-content">
-                    <div class="story-category">Movies</div>
-                    <h3 class="story-title">Kenyan Film 'Nairobi Half Life' Sequel Announced for 2027</h3>
-                    <p class="story-excerpt">
-                        After years of speculation, the director confirms production will begin next year 
-                        with original cast members returning to tell the next chapter.
-                    </p>
-                    <div class="story-meta">
-                        <span>4 hours ago</span>
-                        <span>💬 189 comments</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Story 3 -->
-            <article class="story-card" onclick="openStory('story3')">
-                <div class="story-image">
-                    <img src="./tech_story_3.jpg" alt="Entertainment News">
-                    <span class="video-badge">EXCLUSIVE</span>
-                </div>
-                <div class="story-content">
-                    <div class="story-category">Music</div>
-                    <h3 class="story-title">Sauti Sol Members Launch Solo Projects: What Fans Need to Know</h3>
-                    <p class="story-excerpt">
-                        Each member reveals individual artistic directions while promising the group 
-                        will reunite for special projects and tours in the future.
-                    </p>
-                    <div class="story-meta">
-                        <span>6 hours ago</span>
-                        <span>💬 567 comments</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Story 4 -->
-            <article class="story-card" onclick="openStory('story4')">
-                <div class="story-image">
-                    <img src="./matatu_story_1.jpg" alt="Entertainment News">
-                </div>
-                <div class="story-content">
-                    <div class="story-category">Events</div>
-                    <h3 class="story-title">Blankets & Wine Festival Returns with International Headliners</h3>
-                    <p class="story-excerpt">
-                        East Africa's premier lifestyle festival announces lineup featuring Grammy-nominated 
-                        artists and top local performers for the December edition.
-                    </p>
-                    <div class="story-meta">
-                        <span>8 hours ago</span>
-                        <span>💬 123 comments</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Story 5 -->
-            <article class="story-card" onclick="openStory('story5')">
-                <div class="story-image">
-                    <img src="./matatu_story_2.jpg" alt="Entertainment News">
-                    <span class="video-badge">TRENDING</span>
-                </div>
-                <div class="story-content">
-                    <div class="story-category">Lifestyle</div>
-                    <h3 class="story-title">Inside Nairobi's Underground Comedy Scene</h3>
-                    <p class="story-excerpt">
-                        We explore the rising stand-up comedy clubs in the city where new talent 
-                        is challenging established names and reshaping Kenyan humor.
-                    </p>
-                    <div class="story-meta">
-                        <span>12 hours ago</span>
-                        <span>💬 89 comments</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Story 6 -->
-            <article class="story-card" onclick="openStory('story6')">
-                <div class="story-image">
-                    <img src="./matatu_story_3.jpg" alt="Entertainment News">
+                    <img src="./matatu_story_1.jpg" alt="Matatu Graffiti Art">
+                    <span class="video-badge">FEATURED</span>
                 </div>
                 <div class="story-content">
                     <div class="story-category">Culture</div>
-                    <h3 class="story-title">Gengetone Evolution: How the Sound is Going Global</h3>
+                    <h3 class="story-title">Nairobi Matatu Culture: The Moving Art That Never Sleeps</h3>
                     <p class="story-excerpt">
-                        From Nairobi estates to international streaming charts, Gengetone artists 
-                        are redefining Kenyan music for a new generation.
+                        In the fast-moving urban life of Kenya, few things define daily experience more vividly 
+                        than the matatu system. These minibuses are not just transport—they are a living cultural 
+                        phenomenon.
                     </p>
                     <div class="story-meta">
-                        <span>1 day ago</span>
-                        <span>💬 445 comments</span>
+                        <span>April 17, 2026</span>
+                        <span>⏱️ 6 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Additional Story Card -->
+            <article class="story-card">
+                <div class="story-image">
+                    <img src="./matatu_story_2.jpg" alt="Matatu Interior">
+                </div>
+                <div class="story-content">
+                    <div class="story-category">Lifestyle</div>
+                    <h3 class="story-title">Inside Nairobi's Most Iconic Matatu Routes</h3>
+                    <p class="story-excerpt">
+                        From Rongai to Ngong, explore the routes that have become legends in Nairobi's 
+                        public transport history and the stories behind them.
+                    </p>
+                    <div class="story-meta">
+                        <span>April 16, 2026</span>
+                        <span>⏱️ 4 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tech Story Card -->
+            <article class="story-card">
+                <div class="story-image">
+                    <img src="./tech_story_3.jpg" alt="Tech Hub">
+                </div>
+                <div class="story-content">
+                    <div class="story-category">Innovation</div>
+                    <h3 class="story-title">The Rise of Nairobi's Innovation Hubs</h3>
+                    <p class="story-excerpt">
+                        How iHub, Nailab, and other incubators are nurturing the next generation of 
+                        African tech entrepreneurs and changing the startup landscape.
+                    </p>
+                    <div class="story-meta">
+                        <span>April 15, 2026</span>
+                        <span>⏱️ 5 min read</span>
                     </div>
                 </div>
             </article>
         </div>
 
-        <!-- Two Column Layout -->
-        <div class="two-column">
-            <div class="main-content">
-                <div class="section-header">
-                    <h3 class="section-title">More Stories</h3>
+        <!-- Full Story 2: Matatu Culture -->
+        <article class="full-story" id="culture">
+            <h2 class="full-story-title">Nairobi Matatu Culture: The Moving Art That Never Sleeps</h2>
+
+            <div class="full-story-content">
+                <p>In the fast-moving urban life of Kenya, few things define daily experience more vividly than the matatu system. These minibuses are not just a transport network—they are a living cultural phenomenon that blends art, music, economy, and street identity into one moving ecosystem.</p>
+
+                <p>Every matatu begins its identity long before it hits the road. Artists spend hours designing graffiti-style exteriors, often inspired by pop culture, local heroes, music icons, or social themes. Inside, the transformation continues with LED lights, high-powered sound systems, custom seats, and unique branding that makes each vehicle distinct.</p>
+
+                <div class="story-media">
+                    <img src="./matatu_story_1.jpg" alt="Matatu Graffiti Art">
                 </div>
 
-                <!-- Additional Stories List -->
-                <div class="stories-list">
-                    <article class="story-card" style="display:flex; gap:1.5rem; margin-bottom:1.5rem;">
-                        <div class="story-image" style="width:200px; height:150px; flex-shrink:0;">
-                            <img src="./tech_story_4.jpg" alt="Story" style="width:100%; height:100%; object-fit:cover;">
-                        </div>
-                        <div class="story-content" style="flex:1; padding:0;">
-                            <div class="story-category">Celebrity Gossip</div>
-                            <h3 class="story-title">Eric Omondi Addresses Beef with Fellow Comedians</h3>
-                            <p class="story-excerpt">The comedian sets the record straight on recent social media drama...</p>
-                            <div class="story-meta">
-                                <span>2 days ago</span>
-                                <span>💬 892 comments</span>
-                            </div>
-                        </div>
-                    </article>
+                <p>For passengers, stepping into a matatu is an experience of its own. Music fills the air, sometimes so loud it becomes part of the ride itself. Conductors call out destinations in fast, rhythmic chants that feel like performance poetry. Young people often see matatus as more than transport—they are social spaces where conversations, trends, and culture are exchanged.</p>
 
-                    <article class="story-card" style="display:flex; gap:1.5rem; margin-bottom:1.5rem;">
-                        <div class="story-image" style="width:200px; height:150px; flex-shrink:0;">
-                            <img src="./matatu_story_4.jpg" alt="Story" style="width:100%; height:100%; object-fit:cover;">
-                        </div>
-                        <div class="story-content" style="flex:1; padding:0;">
-                            <div class="story-category">TV & Radio</div>
-                            <h3 class="story-title">Popular Radio Presenter Joins New Station</h3>
-                            <p class="story-excerpt">After 5 years at the previous network, the move shocks industry insiders...</p>
-                            <div class="story-meta">
-                                <span>2 days ago</span>
-                                <span>💬 234 comments</span>
-                            </div>
-                        </div>
-                    </article>
+                <div class="story-media">
+                    <img src="./matatu_story_2.jpg" alt="Matatu Interior Experience">
                 </div>
+
+                <p>Behind this creativity is a crucial transport system that keeps Nairobi moving. Every day, millions of people rely on matatus to travel to work, school, markets, and hospitals. Without them, the city's mobility would collapse under pressure.</p>
+
+                <div class="story-media">
+                    <img src="./matatu_story_3.jpg" alt="Nairobi Public Transport">
+                </div>
+
+                <p>But the system operates in a complex environment. Traffic congestion in Nairobi is among the most challenging in the region, often causing long delays during peak hours. Route competition between operators can be intense, with each sacco trying to dominate popular routes. Regulations also evolve frequently, affecting pricing, design, and operation standards.</p>
+
+                <div class="story-media">
+                    <img src="./matatu_story_4.jpg" alt="Matatu Route Competition">
+                </div>
+
+                <p>Despite these issues, matatu culture continues to evolve rather than disappear. New designs appear regularly, each trying to push boundaries in creativity and style. The culture has even influenced fashion, music, and digital content creation, becoming a symbol of urban expression.</p>
+
+                <p>For outsiders, it may look chaotic. For locals, it is structured chaos with rhythm and identity. It represents survival, creativity, and movement all at once. Matatus are not just part of Nairobi—they are Nairobi in motion.</p>
             </div>
-
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-widget">
-                    <h4 class="widget-title">🔥 Trending Now</h4>
-                    <ul class="trending-list">
-                        <li class="trending-item">
-                            <span class="trending-number">1</span>
-                            <div class="trending-content">
-                                <h4>Willy Paul New Controversy</h4>
-                                <span>15K shares</span>
-                            </div>
-                        </li>
-                        <li class="trending-item">
-                            <span class="trending-number">2</span>
-                            <div class="trending-content">
-                                <h4>Bahati and Diana Split Rumors</h4>
-                                <span>12K shares</span>
-                            </div>
-                        </li>
-                        <li class="trending-item">
-                            <span class="trending-number">3</span>
-                            <div class="trending-content">
-                                <h4>Kenya vs Nigeria Music Debate</h4>
-                                <span>8K shares</span>
-                            </div>
-                        </li>
-                        <li class="trending-item">
-                            <span class="trending-number">4</span>
-                            <div class="trending-content">
-                                <h4>New Reality Show Announcement</h4>
-                                <span>6K shares</span>
-                            </div>
-                        </li>
-                        <li class="trending-item">
-                            <span class="trending-number">5</span>
-                            <div class="trending-content">
-                                <h4>Award Show Nominees List</h4>
-                                <span>5K shares</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-widget">
-                    <h4 class="widget-title">📧 Newsletter</h4>
-                    <p style="font-size:0.9rem; color:#666; margin-bottom:1rem;">
-                        Get the hottest entertainment news delivered to your inbox daily!
-                    </p>
-                    <form class="subscribe-form" style="flex-direction:column; gap:0.5rem;">
-                        <input type="email" placeholder="Your email" style="border:1px solid #ddd; border-radius:4px;">
-                        <button type="submit" style="border-radius:4px; background:var(--tuko-red);">Subscribe</button>
-                    </form>
-                </div>
-            </aside>
-        </div>
+        </article>
 
     </main>
 
-    <!-- Video Section -->
-    <section class="video-section">
+    <!-- Video Section with Fixed Video -->
+    <section class="video-section" id="video">
         <div class="container">
             <div class="section-header">
-                <h3 class="section-title">Must Watch Videos</h3>
-                <a href="#" class="view-all" style="color:white;">View All →</a>
+                <h3 class="section-title">Must Watch: Matatu Culture in Motion</h3>
             </div>
 
             <div class="video-grid">
-                <!-- Video 1 -->
                 <div class="video-card">
                     <div class="video-wrapper">
                         <video 
-                            id="video-1"
+                            id="matatu-video"
                             controls
                             preload="metadata"
-                            poster="./matatu_story_1.jpg">
+                            poster="./matatu_story_4.jpg">
                             <source src="./matatu_culture_video.mp4" type="video/mp4">
+                            <source src="./matatu_culture_video.webm" type="video/webm">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="video-card-content">
-                        <h4 class="video-card-title">Behind the Scenes: Matatu Art Creation</h4>
-                        <p style="font-size:0.9rem; opacity:0.8;">Watch how Nairobi's iconic matatu art comes to life</p>
+                        <h4 class="video-card-title">The Art of the Matatu</h4>
+                        <p style="font-size:0.9rem; opacity:0.8;">Experience Nairobi's moving art culture in action</p>
                     </div>
                 </div>
 
-                <!-- Video 2 -->
                 <div class="video-card">
                     <div class="video-wrapper">
                         <video 
-                            id="video-2"
                             controls
                             preload="metadata"
                             poster="./tech_story_1.jpg">
@@ -1078,16 +926,14 @@
                         </video>
                     </div>
                     <div class="video-card-content">
-                        <h4 class="video-card-title">Interview: Rising Star in Kenyan Music</h4>
-                        <p style="font-size:0.9rem; opacity:0.8;">Exclusive conversation with the artist taking over charts</p>
+                        <h4 class="video-card-title">Tech Innovation in Nairobi</h4>
+                        <p style="font-size:0.9rem; opacity:0.8;">How startups are transforming the city</p>
                     </div>
                 </div>
 
-                <!-- Video 3 -->
                 <div class="video-card">
                     <div class="video-wrapper">
                         <video 
-                            id="video-3"
                             controls
                             preload="metadata"
                             poster="./matatu_story_2.jpg">
@@ -1096,8 +942,8 @@
                         </video>
                     </div>
                     <div class="video-card-content">
-                        <h4 class="video-card-title">Event Coverage: Nairobi Festival 2026</h4>
-                        <p style="font-size:0.9rem; opacity:0.8;">Highlights from the biggest cultural celebration of the year</p>
+                        <h4 class="video-card-title">Inside the Matatu Experience</h4>
+                        <p style="font-size:0.9rem; opacity:0.8;">A passenger's journey through Nairobi</p>
                     </div>
                 </div>
             </div>
@@ -1108,7 +954,7 @@
     <section class="subscription-section">
         <div class="subscription-content">
             <h2>Join the Mic Cheque Family</h2>
-            <p>Get exclusive entertainment news, behind-the-scenes content, and VIP event access delivered straight to your inbox.</p>
+            <p>Get exclusive stories, behind-the-scenes content, and updates delivered straight to your inbox.</p>
             <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Welcome to Mic Cheque! Check your email for confirmation.');">
                 <input type="email" placeholder="Enter your email address" required>
                 <button type="submit">Subscribe Now</button>
@@ -1126,13 +972,12 @@
                 <a href="#">Advertise</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Use</a>
-                <a href="#">Careers</a>
             </div>
             <p class="copyright">&copy; 2026 MIC CHEQUE. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Video Handling and Interactivity -->
+    <!-- JavaScript -->
     <script>
         // Set current date
         document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', { 
@@ -1142,64 +987,31 @@
             day: 'numeric' 
         });
 
-        // Video Autoplay Fix - Ensure videos play properly
+        // Video autoplay handling
         document.addEventListener('DOMContentLoaded', function() {
             const videos = document.querySelectorAll('video[autoplay]');
 
             videos.forEach(function(video) {
-                // Ensure muted for autoplay
                 video.muted = true;
-
-                // Attempt to play
                 var playPromise = video.play();
 
                 if (playPromise !== undefined) {
                     playPromise.then(function() {
-                        console.log('Video autoplay started successfully');
+                        console.log('Video autoplay started');
                     }).catch(function(error) {
                         console.log('Autoplay prevented:', error);
-                        // Show play button if autoplay fails
                         video.setAttribute('controls', '');
                     });
                 }
-
-                // Handle visibility change (pause when tab not active to save resources)
-                document.addEventListener('visibilitychange', function() {
-                    if (document.hidden) {
-                        video.pause();
-                    } else if (video.hasAttribute('autoplay')) {
-                        video.play().catch(function(e) {
-                            console.log('Resume play failed:', e);
-                        });
-                    }
-                });
             });
         });
 
-        // Toggle play/pause for featured video
-        function toggleVideo(videoId) {
-            const video = document.getElementById(videoId);
-            if (video.paused) {
-                video.play();
-                video.setAttribute('controls', '');
-            } else {
-                video.pause();
-            }
-        }
-
-        // Story click handler
-        function openStory(storyId) {
-            console.log('Opening story:', storyId);
-            // In real implementation, this would navigate to story page
-            // window.location.href = '/story/' + storyId;
-        }
-
-        // Breaking news ticker animation
+        // Breaking news ticker
         const tickerTexts = [
-            "Sauti Sol announces reunion concert dates for 2026!",
-            "Diamond Platnumz new album breaks streaming records!",
-            "Kenyan film selected for Cannes Film Festival!",
-            "Major artist collaboration announced for Blankets & Wine!"
+            "Nairobi Tech Scene Hits Record Investment Numbers!",
+            "New Matatu Design Trends Taking Over the City!",
+            "Kenyan Startup Raises $5M in Series A Funding!",
+            "Matatu Art Exhibition Opens at National Museum!"
         ];
 
         let tickerIndex = 0;

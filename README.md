@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIC CHEQUE | Professional Storytelling</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* ===========================
            ROOT VARIABLES (DARK THEME)
@@ -521,8 +522,11 @@
             <!-- Hero Section -->
             <div class="hero-section">
                 <div class="hero-main">
-                    <img src="./tech_story_1.jpg" alt="Arsenal 2026 Champions">
-                    <div class="hero-overlay">
+                    <video width="100%" height="100%" style="object-fit: cover;" poster="./tech_story_1.jpg" controls>
+                        <source src="./Arsenal.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="hero-overlay" style="pointer-events: none;">
                         <span class="card-category">Sports</span>
                         <h2 class="hero-title">Arsenal Crowned Premier League Champions 2026: The 22-Year Wait is Over</h2>
                     </div>
@@ -673,7 +677,12 @@
                     </div>
                 </div>
                 <div class="story-card">
-                    <div class="card-img"><img src="./matatu_story_3.jpg" alt="Street Food"></div>
+                    <div class="card-img">
+                        <video width="100%" height="100%" style="object-fit: cover;" poster="./tech_story_3.jpg" controls>
+                            <source src="./Streetfood.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <div class="card-body">
                         <span class="card-category">Food</span>
                         <h3 class="card-title">Nairobi's Best Street Food: A Culinary Journey</h3>
@@ -738,9 +747,11 @@
     </div>
     <div class="video-grid">
         <div class="video-card">
-            <img src="./matatu_story_2.jpg" alt="Summertides">
-            <div class="play-btn">▶</div>
-            <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800;">Summertides Festival 2026 Highlights</div>
+            <video width="100%" height="100%" style="object-fit: cover;" poster="./tech_story_2.jpg" controls>
+                <source src="./summertidesvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800; pointer-events: none;">Summertides Festival 2026 Highlights</div>
         </div>
         <div class="video-card">
             <img src="./tech_story_3.jpg" alt="Nyashinski">
@@ -748,9 +759,11 @@
             <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800;">Nyashinski Live at Kasarani Stadium</div>
         </div>
         <div class="video-card">
-            <img src="./tech_story_1.jpg" alt="Arsenal">
-            <div class="play-btn">▶</div>
-            <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800;">Arsenal: The Road to the 2026 Title</div>
+            <video width="100%" height="100%" style="object-fit: cover;" poster="./tech_story_1.jpg" controls>
+                <source src="./Arsenal.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800; pointer-events: none;">Arsenal: The Road to the 2026 Title</div>
         </div>
     </div>
 </div>
@@ -782,10 +795,10 @@
         <div class="footer-col">
             <h4>Follow Us</h4>
             <div class="social-icons" style="display: flex; gap: 1rem;">
-                <a href="#" style="color: white; font-size: 1.2rem;">FB</a>
-                <a href="#" style="color: white; font-size: 1.2rem;">TW</a>
-                <a href="#" style="color: white; font-size: 1.2rem;">IG</a>
-                <a href="#" style="color: white; font-size: 1.2rem;">YT</a>
+                <a href="#" style="color: white; font-size: 1.2rem;" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: white; font-size: 1.2rem;" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" style="color: white; font-size: 1.2rem;" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: white; font-size: 1.2rem;" title="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>

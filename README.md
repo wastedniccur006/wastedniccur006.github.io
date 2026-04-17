@@ -347,152 +347,108 @@
         }
 
         /* ===========================
-           FULL STORY ARTICLE (DARK)
+           FULL STORY STYLING
         =========================== */
         .full-story-wrap {
             background: var(--card-bg);
-            border-radius: 6px;
             padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-
-        .full-story-header {
-            border-bottom: 1px solid #333;
-            padding-bottom: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .full-story-title {
-            font-family: var(--font-heading);
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: #fff;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-
-        .full-story-meta {
-            font-family: var(--font-accent);
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .full-story-body {
-            font-family: var(--font-body);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #ccc;
-        }
-
-        .full-story-body p { margin-bottom: 1.5rem; }
-
-        .story-media-block {
-            margin: 2rem 0;
             border-radius: 8px;
-            overflow: hidden;
+            margin-bottom: 3rem;
         }
 
-        .img-placeholder {
-            width: 100%; height: 300px;
-            background: #2a2a2a;
-            display: flex; align-items: center; justify-content: center;
-            color: #555; font-size: 0.9rem; text-align: center;
-        }
+        .full-story-header { margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; }
+        .full-story-title { font-family: var(--font-heading); font-size: 2.5rem; color: white; line-height: 1.1; margin-bottom: 1rem; }
+        .full-story-meta { font-family: var(--font-accent); font-size: 0.75rem; color: var(--text-muted); display: flex; gap: 1.5rem; }
 
-        .img-caption {
-            font-family: var(--font-accent);
-            font-size: 0.75rem;
-            color: #666;
-            padding: 0.5rem 0;
-            font-style: italic;
-            border-bottom: 1px solid #222;
+        .full-story-body p { margin-bottom: 1.5rem; font-size: 1.1rem; color: #ccc; }
+        .full-story-body p::first-letter {
+            float: left;
+            font-size: 4rem;
+            line-height: 1;
+            font-weight: 900;
+            margin-right: 0.5rem;
+            color: var(--tuko-red);
+            font-family: var(--font-display);
         }
+        .full-story-body p + p::first-letter { float: none; font-size: inherit; line-height: inherit; font-weight: inherit; margin-right: 0; color: inherit; font-family: inherit; }
+
+        .story-media-block { margin: 2.5rem 0; }
+        .story-media-block img { border-radius: 8px; width: 100%; }
+        .img-caption { font-family: var(--font-accent); font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center; font-style: italic; }
 
         /* ===========================
-           SIDEBAR WIDGETS
+           SIDEBAR STYLING
         =========================== */
-        .sidebar-widget {
-            background: var(--card-bg);
-            padding: 1.2rem;
-            border-radius: 6px;
-            margin-bottom: 1.5rem;
-        }
-
+        .sidebar-widget { background: var(--card-bg); padding: 1.2rem; border-radius: 6px; margin-bottom: 1.5rem; }
         .widget-title {
+            font-family: var(--font-accent);
             font-size: 0.85rem;
             font-weight: 800;
             text-transform: uppercase;
-            color: #fff;
-            border-bottom: 2px solid var(--tuko-red);
-            padding-bottom: 0.5rem;
+            color: white;
             margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--tuko-red);
         }
 
-        .trending-item {
-            display: flex;
-            gap: 0.8rem;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #333;
-        }
-
-        .trending-num { font-size: 1.5rem; font-weight: 900; color: #444; }
-        .trending-title { font-size: 0.85rem; color: #fff; font-family: var(--font-heading); }
+        .trending-item { display: flex; gap: 0.8rem; margin-bottom: 1rem; align-items: center; }
+        .trending-num { font-size: 1.5rem; font-weight: 900; color: #333; font-family: var(--font-display); }
+        .trending-text { font-size: 0.85rem; font-weight: 600; color: #eee; line-height: 1.3; }
 
         /* ===========================
            VIDEO SECTION
         =========================== */
-        .video-section {
-            background: #000;
-            padding: 3rem 0;
-            margin-top: 2rem;
+        .video-section { background: #000; padding: 3rem 0; margin: 3rem 0; }
+        .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+        .video-card { position: relative; border-radius: 8px; overflow: hidden; height: 200px; }
+        .video-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+        .play-btn {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px; height: 50px;
+            background: var(--tuko-red);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 1.2rem;
         }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .video-card { background: #111; border-radius: 8px; overflow: hidden; }
-        .video-thumb { position: relative; padding-top: 56.25%; background: #222; }
-        .video-thumb video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-        .video-info { padding: 1rem; }
-        .video-title { color: white; font-size: 0.95rem; font-weight: 700; }
 
         /* ===========================
            FOOTER
         =========================== */
-        footer {
-            background: #000;
-            padding: 4rem 1rem 2rem;
-            border-top: 1px solid #222;
+        .main-footer { background: #000; color: #888; padding: 4rem 0 2rem; border-top: 4px solid var(--tuko-red); }
+        .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 1rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        .footer-col h4 { color: white; font-family: var(--font-accent); font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.6rem; font-size: 0.8rem; }
+        .footer-bottom { max-width: 1280px; margin: 2rem auto 0; padding: 2rem 1rem 0; border-top: 1px solid #222; text-align: center; font-size: 0.7rem; }
+
+        /* Placeholders */
+        .img-placeholder {
+            width: 100%;
+            height: 100%;
+            background: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-family: var(--font-accent);
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 1rem;
         }
 
-        .footer-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
-        .footer-col h4 { color: white; margin-bottom: 1.5rem; text-transform: uppercase; font-size: 0.8rem; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 0.8rem; font-size: 0.8rem; color: #888; }
-
-        /* ===========================
-           RESPONSIVE
-        =========================== */
-        @media (max-width: 1024px) {
+        @media (max-width: 992px) {
             .content-layout { grid-template-columns: 1fr; }
-            .stories-grid { grid-template-columns: 1fr 1fr; }
+            .hero-section { grid-template-columns: 1fr; }
+            .stories-grid { grid-template-columns: repeat(2, 1fr); }
+            .video-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        @media (max-width: 768px) {
-            .hero-section { grid-template-columns: 1fr; }
+        @media (max-width: 600px) {
             .stories-grid { grid-template-columns: 1fr; }
             .video-grid { grid-template-columns: 1fr; }
             .footer-inner { grid-template-columns: 1fr; }
-            .full-story-title { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -565,7 +521,7 @@
             <!-- Hero Section -->
             <div class="hero-section">
                 <div class="hero-main">
-                    <div class="img-placeholder">Arsenal 2026 Champions Image</div>
+                    <img src="./tech_story_1.jpg" alt="Arsenal 2026 Champions">
                     <div class="hero-overlay">
                         <span class="card-category">Sports</span>
                         <h2 class="hero-title">Arsenal Crowned Premier League Champions 2026: The 22-Year Wait is Over</h2>
@@ -573,14 +529,14 @@
                 </div>
                 <div class="hero-side">
                     <div class="story-card" style="display: flex; height: 195px; margin-bottom: 10px;">
-                        <div style="width: 40%; background: #333;"><div class="img-placeholder">Festival</div></div>
+                        <div style="width: 40%; background: #333;"><img src="./tech_story_2.jpg" alt="Festival" style="height: 100%; object-fit: cover;"></div>
                         <div class="card-body" style="width: 60%;">
                             <span class="card-category">Culture</span>
                             <h3 class="card-title" style="font-size: 0.9rem;">Summertides Festival 2026: Nairobi's Biggest Music Event</h3>
                         </div>
                     </div>
                     <div class="story-card" style="display: flex; height: 195px;">
-                        <div style="width: 40%; background: #333;"><div class="img-placeholder">Nyashinski</div></div>
+                        <div style="width: 40%; background: #333;"><img src="./tech_story_3.jpg" alt="Nyashinski" style="height: 100%; object-fit: cover;"></div>
                         <div class="card-body" style="width: 60%;">
                             <span class="card-category">Entertainment</span>
                             <h3 class="card-title" style="font-size: 0.9rem;">Nyashinski Shuts Down Kasarani with Historic Performance</h3>
@@ -606,24 +562,24 @@
                     <p>In the modern heartbeat of Kenya, Nairobi has grown into one of Africa's most influential innovation centers. What once looked like a city focused mainly on trade and administration is now home to fast-growing startups, digital creators, and software engineers shaping solutions for global markets.</p>
                     <p>This transformation did not happen overnight. It started in small internet cafés, university dorm rooms, and cramped rented apartments where young people experimented with code, design, and online business ideas. Many had no formal funding, no advanced equipment, and limited mentorship. What they had was curiosity and persistence.</p>
                     <div class="story-media-block">
-                        <div class="img-placeholder">Nairobi Tech Innovation Image</div>
+                        <img src="./tech_story_1.jpg" alt="Nairobi Tech Innovation">
                         <p class="img-caption">Nairobi's tech ecosystem continues to attract global attention — Photo: MIC CHEQUE</p>
                     </div>
                     <p>Today, those early experiments have evolved into real companies. Fintech platforms are now handling payments across East Africa. Logistics startups are improving delivery systems for small businesses. Health-tech tools are helping patients in remote areas access medical advice without traveling long distances.</p>
                     <p>A major driver of this growth is mobile technology. With widespread smartphone adoption and mobile money systems, developers have been able to build services that reach millions instantly. This has made Kenya one of the most advanced mobile-first economies in the world.</p>
                     <div class="story-media-block">
-                        <div class="img-placeholder">Mobile Technology in Kenya Image</div>
+                        <img src="./tech_story_2.jpg" alt="Mobile Technology in Kenya">
                         <p class="img-caption">Mobile technology is the backbone of Kenya's digital economy — Photo: MIC CHEQUE</p>
                     </div>
                     <p>However, the journey is still far from easy. Many startups struggle with funding gaps, especially at early stages. Others face infrastructure challenges such as inconsistent internet in certain areas or high operational costs. Competition is also intense, with hundreds of new ideas launched every year.</p>
                     <div class="story-media-block">
-                        <div class="img-placeholder">Startups in Nairobi Image</div>
+                        <img src="./tech_story_3.jpg" alt="Startups in Nairobi">
                         <p class="img-caption">Startup culture is thriving despite funding challenges — Photo: MIC CHEQUE</p>
                     </div>
                     <p>Despite these challenges, the energy remains strong. Incubators and innovation hubs continue to support young talent. Universities are producing more tech graduates than ever before. International investors are increasingly paying attention to Nairobi as a serious tech destination.</p>
                     <p>What stands out most is the mindset shift. Young innovators are no longer waiting for jobs—they are building them. They are creating platforms that solve local problems while also competing globally. Nairobi is no longer just participating in the digital economy; it is actively shaping it.</p>
                     <div class="story-media-block">
-                        <div class="img-placeholder">Future of Nairobi Tech Image</div>
+                        <img src="./tech_story_4.jpg" alt="Future of Nairobi Tech">
                         <p class="img-caption">The future of Nairobi's tech scene looks brighter than ever — Photo: MIC CHEQUE</p>
                     </div>
                 </div>
@@ -646,89 +602,83 @@
                     <p>In the fast-moving urban life of Kenya, few things define daily experience more vividly than the matatu system. These minibuses are not just a transport network—they are a living cultural phenomenon that blends art, music, economy, and street identity into one moving ecosystem.</p>
                     <p>Every matatu begins its identity long before it hits the road. Artists spend hours designing graffiti-style exteriors, often inspired by pop culture, local heroes, music icons, or social themes. Inside, the transformation continues with LED lights, high-powered sound systems, custom seats, and unique branding that makes each vehicle distinct.</p>
                     <div class="story-media-block">
-                        <div class="img-placeholder">Matatu Graffiti Art Image</div>
+                        <img src="./matatu_story_1.jpg" alt="Matatu Graffiti Art">
                         <p class="img-caption">Matatu graffiti art is a statement of identity and culture — Photo: MIC CHEQUE</p>
                     </div>
                     <p>For passengers, stepping into a matatu is an experience of its own. Music fills the air, sometimes so loud it becomes part of the ride itself. Conductors call out destinations in fast, rhythmic chants that feel like performance poetry. Young people often see matatus as more than transport—they are social spaces where conversations, trends, and culture are exchanged.</p>
                     <div class="story-media-block">
-                        <div class="img-placeholder">Matatu Interior Experience Image</div>
+                        <img src="./matatu_story_2.jpg" alt="Matatu Interior Experience">
                         <p class="img-caption">Inside a matatu — a sensory experience unlike any other — Photo: MIC CHEQUE</p>
                     </div>
                     <p>Behind this creativity is a crucial transport system that keeps Nairobi moving. Every day, millions of people rely on matatus to travel to work, school, markets, and hospitals. Without them, the city's mobility would collapse under pressure.</p>
                     <div class="story-media-block">
-                        <div class="img-placeholder">Nairobi Public Transport Image</div>
+                        <img src="./matatu_story_3.jpg" alt="Nairobi Public Transport">
                         <p class="img-caption">Matatus are the lifeblood of Nairobi's public transport network — Photo: MIC CHEQUE</p>
                     </div>
                     <p>But the system operates in a complex environment. Traffic congestion in Nairobi is among the most challenging in the region, often causing long delays during peak hours. Route competition between operators can be intense, with each sacco trying to dominate popular routes. Regulations also evolve frequently, affecting pricing, design, and operation standards.</p>
                     <div class="story-media-block">
-                        <img src="./matatu_story_4.jpg" alt="Nairobi Matatu Culture" style="width: 100%; height: auto; border-radius: 8px;">
+                        <img src="./matatu_story_4.jpg" alt="Nairobi Matatu Culture">
                         <p class="img-caption">Competition on popular routes is fierce among matatu saccos — Photo: MIC CHEQUE</p>
                     </div>
                     <p>Despite these issues, matatu culture continues to evolve rather than disappear. New designs appear regularly, each trying to push boundaries in creativity and style. The culture has even influenced fashion, music, and digital content creation, becoming a symbol of urban expression.</p>
-                    <p>For outsiders, it may look chaotic. For locals, it is structured chaos with rhythm and identity. It represents survival, creativity, and movement all at once. Matatus are not just part of Nairobi—they are Nairobi in motion.</p>
+                    <p>For outsiders, it may look chaotic. For locals, it is structured chaos with rhythm and identity. It represents survival, creativity, and movement all at once. Matatus are not just buses; they are the soul of Nairobi's streets.</p>
                 </div>
             </article>
 
-            <!-- More Stories Section -->
+            <!-- More Stories Grid -->
             <div class="section-header">
                 <h2 class="section-title">More Stories</h2>
             </div>
             <div class="stories-grid">
-                <article class="story-card">
-                    <div class="card-img"><div class="img-placeholder">Tech News</div></div>
+                <div class="story-card">
+                    <div class="card-img"><img src="./tech_story_1.jpg" alt="AI Hub"></div>
                     <div class="card-body">
-                        <span class="card-category">Technology</span>
-                        <h3 class="card-title">Kenya's Silicon Savannah Welcomes New AI Hub</h3>
-                        <p class="card-excerpt">A major investment in Nairobi's tech scene aims to position Kenya as Africa's AI leader.</p>
+                        <span class="card-category">Tech</span>
+                        <h3 class="card-title">Kenya Launches New AI Research Hub in Nairobi</h3>
                     </div>
-                </article>
-                <article class="story-card">
-                    <div class="card-img"><div class="img-placeholder">Fashion</div></div>
+                </div>
+                <div class="story-card">
+                    <div class="card-img"><img src="./matatu_story_2.jpg" alt="Fashion"></div>
                     <div class="card-body">
                         <span class="card-category">Lifestyle</span>
-                        <h3 class="card-title">Nairobi Fashion Week: The Bold and the Beautiful</h3>
-                        <p class="card-excerpt">Local designers showcase stunning collections that blend tradition with modern flair.</p>
+                        <h3 class="card-title">Nairobi Fashion Week 2026: Top Trends to Watch</h3>
                     </div>
-                </article>
-                <article class="story-card">
-                    <div class="card-img"><div class="img-placeholder">Economy</div></div>
+                </div>
+                <div class="story-card">
+                    <div class="card-img"><img src="./tech_story_4.jpg" alt="Economy"></div>
                     <div class="card-body">
                         <span class="card-category">Business</span>
-                        <h3 class="card-title">Shilling Strengthens Against the Dollar in Q1 2026</h3>
-                        <p class="card-excerpt">Economic analysts predict a stable year for the Kenyan currency following new trade deals.</p>
+                        <h3 class="card-title">Kenyan Shilling Strengthens Against Major Currencies</h3>
                     </div>
-                </article>
+                </div>
             </div>
 
             <!-- New Stories Section -->
-            <div class="section-header">
+            <div class="section-header" id="new-stories">
                 <h2 class="section-title">New Stories</h2>
             </div>
             <div class="stories-grid">
-                <article class="story-card">
-                    <div class="card-img"><div class="img-placeholder">Travel</div></div>
+                <div class="story-card">
+                    <div class="card-img"><img src="./matatu_story_1.jpg" alt="Lamu"></div>
                     <div class="card-body">
                         <span class="card-category">Travel</span>
-                        <h3 class="card-title">Hidden Gems: 5 Must-Visit Spots in Lamu</h3>
-                        <p class="card-excerpt">Discover the untouched beauty of Lamu's quietest beaches and historic alleys.</p>
+                        <h3 class="card-title">Hidden Gems: Exploring the Magic of Lamu Island</h3>
                     </div>
-                </article>
-                <article class="story-card">
-                    <div class="card-img"><div class="img-placeholder">Health</div></div>
+                </div>
+                <div class="story-card">
+                    <div class="card-img"><img src="./tech_story_2.jpg" alt="Wellness"></div>
                     <div class="card-body">
-                        <span class="card-category">Health</span>
-                        <h3 class="card-title">The Rise of Wellness Retreats in the Rift Valley</h3>
-                        <p class="card-excerpt">Why more Kenyans are choosing nature-based healing over traditional vacations.</p>
+                        <span class="card-category">Wellness</span>
+                        <h3 class="card-title">Rift Valley Retreats: The Ultimate Wellness Guide</h3>
                     </div>
-                </article>
-                <article class="story-card">
-                    <div class="card-img"><div class="img-placeholder">Food</div></div>
+                </div>
+                <div class="story-card">
+                    <div class="card-img"><img src="./matatu_story_3.jpg" alt="Street Food"></div>
                     <div class="card-body">
-                        <span class="card-category">Lifestyle</span>
-                        <h3 class="card-title">Nairobi's Best Street Food: A Culinary Tour</h3>
-                        <p class="card-excerpt">From smoky mutura to spicy bhajias, we explore the city's favorite flavors.</p>
+                        <span class="card-category">Food</span>
+                        <h3 class="card-title">Nairobi's Best Street Food: A Culinary Journey</h3>
                     </div>
-                </article>
+                </div>
             </div>
 
         </main>
@@ -740,49 +690,41 @@
                 <h3 class="widget-title">Trending Now</h3>
                 <div class="trending-item">
                     <span class="trending-num">1</span>
-                    <div class="trending-title">Arsenal's 2026 Victory Parade: Full Route and Details</div>
+                    <p class="trending-text">Arsenal 2026 Victory Parade: Millions Expected in London</p>
                 </div>
                 <div class="trending-item">
                     <span class="trending-num">2</span>
-                    <div class="trending-title">Nyashinski's New Album 'Legacy' Breaks Streaming Records</div>
+                    <p class="trending-text">Nyashinski's New Album Breaks Streaming Records in 24 Hours</p>
                 </div>
                 <div class="trending-item">
                     <span class="trending-num">3</span>
-                    <div class="trending-title">Summertides Festival: Early Bird Tickets Sold Out in Minutes</div>
+                    <p class="trending-text">Summertides Festival 2026: Full Artist Lineup Revealed</p>
                 </div>
                 <div class="trending-item">
                     <span class="trending-num">4</span>
-                    <div class="trending-title">How to Secure Your 2027 General Election Voter ID</div>
+                    <p class="trending-text">Safaricom Announces 6G Pilot Program in Nairobi</p>
                 </div>
                 <div class="trending-item">
                     <span class="trending-num">5</span>
-                    <div class="trending-title">Nairobi Expressway: New Toll Rates Announced for 2026</div>
+                    <p class="trending-text">New Housing Projects Set to Transform Nairobi Skyline</p>
                 </div>
             </div>
 
             <div class="sidebar-widget">
-                <h3 class="widget-title">Latest</h3>
-                <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-                    <div style="width: 60px; height: 60px; background: #333;"></div>
-                    <div>
-                        <h4 style="font-size: 0.75rem; color: #fff;">Safaricom Launches 6G Pilot in Nairobi CBD</h4>
-                        <span style="font-size: 0.6rem; color: #666;">10 mins ago</span>
-                    </div>
+                <h3 class="widget-title">Latest Stories</h3>
+                <div style="font-size: 0.8rem; color: #ccc;">
+                    <p style="margin-bottom: 0.8rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem;">• Safaricom 6G Pilot: What You Need to Know</p>
+                    <p style="margin-bottom: 0.8rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem;">• University Debates: The Future of Education in Kenya</p>
+                    <p style="margin-bottom: 0.8rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem;">• Nairobi Expressway Phase 2: Construction Updates</p>
+                    <p>• Kenya's Green Energy Revolution: New Wind Farm Opens</p>
                 </div>
-                <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-                    <div style="width: 60px; height: 60px; background: #333;"></div>
-                    <div>
-                        <h4 style="font-size: 0.75rem; color: #fff;">Kenyatta University Wins Inter-Varsity Debate</h4>
-                        <span style="font-size: 0.6rem; color: #666;">45 mins ago</span>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 10px;">
-                    <div style="width: 60px; height: 60px; background: #333;"></div>
-                    <div>
-                        <h4 style="font-size: 0.75rem; color: #fff;">New Housing Project Launched in Ruiru</h4>
-                        <span style="font-size: 0.6rem; color: #666;">2 hours ago</span>
-                    </div>
-                </div>
+            </div>
+
+            <div class="sidebar-widget" style="background: var(--tuko-red); color: white;">
+                <h3 class="widget-title" style="border-color: white;">Newsletter</h3>
+                <p style="font-size: 0.8rem; margin-bottom: 1rem;">Get the best stories delivered to your inbox daily.</p>
+                <input type="email" placeholder="Your email" style="width: 100%; padding: 0.5rem; border: none; border-radius: 4px; margin-bottom: 0.5rem;">
+                <button style="width: 100%; padding: 0.5rem; background: #000; color: white; border: none; border-radius: 4px; font-weight: 800; cursor: pointer;">SUBSCRIBE</button>
             </div>
 
         </aside>
@@ -790,99 +732,89 @@
 </div>
 
 <!-- Video Section -->
-<section class="video-section" id="video">
+<div class="video-section" id="video">
     <div class="section-header" style="max-width: 1280px; margin: 0 auto 2rem; padding: 0 1rem;">
         <h2 class="section-title">Must Watch</h2>
     </div>
     <div class="video-grid">
         <div class="video-card">
-            <div class="video-thumb">
-                <video controls poster="./summertides_poster.jpg">
-                    <source src="./summertides_video.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-info">
-                <h4 class="video-title">Summertides Festival 2026 Highlights</h4>
-            </div>
+            <img src="./matatu_story_2.jpg" alt="Summertides">
+            <div class="play-btn">▶</div>
+            <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800;">Summertides Festival 2026 Highlights</div>
         </div>
         <div class="video-card">
-            <div class="video-thumb">
-                <video controls poster="./nyashinski_poster.jpg">
-                    <source src="./nyashinski_video.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-info">
-                <h4 class="video-title">Nyashinski Live at Kasarani Stadium</h4>
-            </div>
+            <img src="./tech_story_3.jpg" alt="Nyashinski">
+            <div class="play-btn">▶</div>
+            <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800;">Nyashinski Live at Kasarani Stadium</div>
         </div>
         <div class="video-card">
-            <div class="video-thumb">
-                <video controls poster="./arsenal_poster.jpg">
-                    <source src="./arsenal_video.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-info">
-                <h4 class="video-title">Arsenal: The Road to the 2026 Title</h4>
-            </div>
+            <img src="./tech_story_1.jpg" alt="Arsenal">
+            <div class="play-btn">▶</div>
+            <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800;">Arsenal: The Road to the 2026 Title</div>
         </div>
     </div>
-</section>
+</div>
 
-<footer>
+<footer class="main-footer">
     <div class="footer-inner">
         <div class="footer-col">
-            <h3 style="color: var(--accent-color); font-family: var(--font-display); margin-bottom: 1rem;">MIC CHEQUE</h3>
-            <p style="font-size: 0.8rem; color: #666;">Professional storytelling from the heart of Kenya. NIKO KADI JE WEWE?</p>
+            <h4 style="font-family: var(--font-display); color: white; font-size: 1.2rem;">MIC CHEQUE</h4>
+            <p style="font-size: 0.75rem; line-height: 1.8;">Professional storytelling and deep dives into the heart of Kenya's culture, technology, and lifestyle.</p>
         </div>
         <div class="footer-col">
             <h4>Sections</h4>
-            <ul>
-                <li>Entertainment</li>
-                <li>Sports</li>
-                <li>Technology</li>
-                <li>Lifestyle</li>
+            <ul class="footer-links">
+                <li><a href="#tech">Technology</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#sports">Sports</a></li>
+                <li><a href="#lifestyle">Lifestyle</a></li>
             </ul>
         </div>
         <div class="footer-col">
             <h4>Company</h4>
-            <ul>
-                <li>About Us</li>
-                <li>Contact</li>
-                <li>Careers</li>
+            <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
             </ul>
         </div>
         <div class="footer-col">
-            <h4>Legal</h4>
-            <ul>
-                <li>Privacy Policy</li>
-                <li>Terms of Use</li>
-            </ul>
+            <h4>Follow Us</h4>
+            <div class="social-icons" style="display: flex; gap: 1rem;">
+                <a href="#" style="color: white; font-size: 1.2rem;">FB</a>
+                <a href="#" style="color: white; font-size: 1.2rem;">TW</a>
+                <a href="#" style="color: white; font-size: 1.2rem;">IG</a>
+                <a href="#" style="color: white; font-size: 1.2rem;">YT</a>
+            </div>
         </div>
     </div>
-    <div style="text-align: center; margin-top: 3rem; font-size: 0.7rem; color: #444;">
-        &copy; 2026 MIC CHEQUE. ALL RIGHTS RESERVED.
+    <div class="footer-bottom">
+        &copy; 2026 MIC CHEQUE. All rights reserved. Designed with passion for storytelling.
     </div>
 </footer>
 
 <script>
-    document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', { 
-        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
-    });
+    // Set current date
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', options);
 
-    const tickerTexts = [
-        "Arsenal Win the Premier League 2026!",
-        "Nyashinski's 'Legacy' Album Hits 100M Streams!",
-        "Summertides Festival 2026: Full Lineup Released!",
-        "Nairobi Tech Hub Secures $50M Funding!"
+    // Ticker animation
+    const headlines = [
+        "Arsenal Win the Premier League 2026! Celebration erupts in London!",
+        "Nyashinski's New Album Breaks Streaming Records in 24 Hours",
+        "Safaricom Announces 6G Pilot Program in Nairobi",
+        "Summertides Festival 2026: Nairobi's Biggest Music Event"
     ];
-    let tickerIndex = 0;
+    let currentIdx = 0;
+    const tickerEl = document.getElementById('ticker');
+
     setInterval(() => {
-        tickerIndex = (tickerIndex + 1) % tickerTexts.length;
-        const ticker = document.getElementById('ticker');
-        ticker.style.opacity = 0;
+        tickerEl.style.opacity = 0;
         setTimeout(() => {
-            ticker.textContent = tickerTexts[tickerIndex];
-            ticker.style.opacity = 1;
+            currentIdx = (currentIdx + 1) % headlines.length;
+            tickerEl.textContent = headlines[currentIdx];
+            tickerEl.style.opacity = 1;
         }, 300);
     }, 5000);
 </script>

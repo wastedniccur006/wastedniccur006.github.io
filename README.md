@@ -661,7 +661,7 @@
                     </div>
                     <p>But the system operates in a complex environment. Traffic congestion in Nairobi is among the most challenging in the region, often causing long delays during peak hours. Route competition between operators can be intense, with each sacco trying to dominate popular routes. Regulations also evolve frequently, affecting pricing, design, and operation standards.</p>
                     <div class="story-media-block">
-                        <div class="img-placeholder">Matatu Route Competition Image</div>
+                        <img src="./matatu_story_4.jpg" alt="Nairobi Matatu Culture" style="width: 100%; height: auto; border-radius: 8px;">
                         <p class="img-caption">Competition on popular routes is fierce among matatu saccos — Photo: MIC CHEQUE</p>
                     </div>
                     <p>Despite these issues, matatu culture continues to evolve rather than disappear. New designs appear regularly, each trying to push boundaries in creativity and style. The culture has even influenced fashion, music, and digital content creation, becoming a symbol of urban expression.</p>

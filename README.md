@@ -153,7 +153,6 @@
             gap: 1rem;
         }
 
-        /* Logo Fix: Using a placeholder if file missing, but styled for dark theme */
         .logo-placeholder {
             width: 50px;
             height: 50px;
@@ -348,6 +347,71 @@
         }
 
         /* ===========================
+           FULL STORY ARTICLE (DARK)
+        =========================== */
+        .full-story-wrap {
+            background: var(--card-bg);
+            border-radius: 6px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .full-story-header {
+            border-bottom: 1px solid #333;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .full-story-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .full-story-meta {
+            font-family: var(--font-accent);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .full-story-body {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .full-story-body p { margin-bottom: 1.5rem; }
+
+        .story-media-block {
+            margin: 2rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .img-placeholder {
+            width: 100%; height: 300px;
+            background: #2a2a2a;
+            display: flex; align-items: center; justify-content: center;
+            color: #555; font-size: 0.9rem; text-align: center;
+        }
+
+        .img-caption {
+            font-family: var(--font-accent);
+            font-size: 0.75rem;
+            color: #666;
+            padding: 0.5rem 0;
+            font-style: italic;
+            border-bottom: 1px solid #222;
+        }
+
+        /* ===========================
            SIDEBAR WIDGETS
         =========================== */
         .sidebar-widget {
@@ -428,14 +492,7 @@
             .stories-grid { grid-template-columns: 1fr; }
             .video-grid { grid-template-columns: 1fr; }
             .footer-inner { grid-template-columns: 1fr; }
-        }
-
-        /* Placeholder for missing images */
-        .img-placeholder {
-            width: 100%; height: 100%;
-            background: #2a2a2a;
-            display: flex; align-items: center; justify-content: center;
-            color: #555; font-size: 0.8rem; text-align: center; padding: 1rem;
+            .full-story-title { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -472,7 +529,6 @@
 <header class="main-header">
     <div class="header-inner">
         <div class="logo-wrap">
-            <!-- Logo Fix: Using a styled placeholder that looks like a logo -->
             <div class="logo-placeholder">MC</div>
             <div class="site-name">
                 <h1>MIC CHEQUE</h1>
@@ -491,11 +547,11 @@
     <div class="nav-inner">
         <ul class="nav-menu">
             <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Entertainment</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">Lifestyle</a></li>
-            <li><a href="#">Politics</a></li>
-            <li><a href="#">Business</a></li>
+            <li><a href="#tech">Technology</a></li>
+            <li><a href="#culture">Culture</a></li>
+            <li><a href="#sports">Sports</a></li>
+            <li><a href="#lifestyle">Lifestyle</a></li>
+            <li><a href="#video">Video</a></li>
         </ul>
     </div>
 </nav>
@@ -532,6 +588,86 @@
                     </div>
                 </div>
             </div>
+
+            <!-- FULL STORY 1: NAIROBI TECH -->
+            <div class="section-header" id="tech">
+                <h2 class="section-title">Featured Story: Technology</h2>
+            </div>
+            <article class="full-story-wrap">
+                <div class="full-story-header">
+                    <h2 class="full-story-title">Nairobi's Tech Hustle: From Small Rooms to Global Impact</h2>
+                    <div class="full-story-meta">
+                        <span>📅 April 17, 2026</span>
+                        <span>⏱️ 8 min read</span>
+                        <span>✍️ MIC CHEQUE Staff</span>
+                    </div>
+                </div>
+                <div class="full-story-body">
+                    <p>In the modern heartbeat of Kenya, Nairobi has grown into one of Africa's most influential innovation centers. What once looked like a city focused mainly on trade and administration is now home to fast-growing startups, digital creators, and software engineers shaping solutions for global markets.</p>
+                    <p>This transformation did not happen overnight. It started in small internet cafés, university dorm rooms, and cramped rented apartments where young people experimented with code, design, and online business ideas. Many had no formal funding, no advanced equipment, and limited mentorship. What they had was curiosity and persistence.</p>
+                    <div class="story-media-block">
+                        <div class="img-placeholder">Nairobi Tech Innovation Image</div>
+                        <p class="img-caption">Nairobi's tech ecosystem continues to attract global attention — Photo: MIC CHEQUE</p>
+                    </div>
+                    <p>Today, those early experiments have evolved into real companies. Fintech platforms are now handling payments across East Africa. Logistics startups are improving delivery systems for small businesses. Health-tech tools are helping patients in remote areas access medical advice without traveling long distances.</p>
+                    <p>A major driver of this growth is mobile technology. With widespread smartphone adoption and mobile money systems, developers have been able to build services that reach millions instantly. This has made Kenya one of the most advanced mobile-first economies in the world.</p>
+                    <div class="story-media-block">
+                        <div class="img-placeholder">Mobile Technology in Kenya Image</div>
+                        <p class="img-caption">Mobile technology is the backbone of Kenya's digital economy — Photo: MIC CHEQUE</p>
+                    </div>
+                    <p>However, the journey is still far from easy. Many startups struggle with funding gaps, especially at early stages. Others face infrastructure challenges such as inconsistent internet in certain areas or high operational costs. Competition is also intense, with hundreds of new ideas launched every year.</p>
+                    <div class="story-media-block">
+                        <div class="img-placeholder">Startups in Nairobi Image</div>
+                        <p class="img-caption">Startup culture is thriving despite funding challenges — Photo: MIC CHEQUE</p>
+                    </div>
+                    <p>Despite these challenges, the energy remains strong. Incubators and innovation hubs continue to support young talent. Universities are producing more tech graduates than ever before. International investors are increasingly paying attention to Nairobi as a serious tech destination.</p>
+                    <p>What stands out most is the mindset shift. Young innovators are no longer waiting for jobs—they are building them. They are creating platforms that solve local problems while also competing globally. Nairobi is no longer just participating in the digital economy; it is actively shaping it.</p>
+                    <div class="story-media-block">
+                        <div class="img-placeholder">Future of Nairobi Tech Image</div>
+                        <p class="img-caption">The future of Nairobi's tech scene looks brighter than ever — Photo: MIC CHEQUE</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- FULL STORY 2: MATATU CULTURE -->
+            <div class="section-header" id="culture">
+                <h2 class="section-title">Deep Dive: Culture</h2>
+            </div>
+            <article class="full-story-wrap">
+                <div class="full-story-header">
+                    <h2 class="full-story-title">Nairobi Matatu Culture: The Moving Art That Never Sleeps</h2>
+                    <div class="full-story-meta">
+                        <span>📅 April 17, 2026</span>
+                        <span>⏱️ 6 min read</span>
+                        <span>✍️ MIC CHEQUE Staff</span>
+                    </div>
+                </div>
+                <div class="full-story-body">
+                    <p>In the fast-moving urban life of Kenya, few things define daily experience more vividly than the matatu system. These minibuses are not just a transport network—they are a living cultural phenomenon that blends art, music, economy, and street identity into one moving ecosystem.</p>
+                    <p>Every matatu begins its identity long before it hits the road. Artists spend hours designing graffiti-style exteriors, often inspired by pop culture, local heroes, music icons, or social themes. Inside, the transformation continues with LED lights, high-powered sound systems, custom seats, and unique branding that makes each vehicle distinct.</p>
+                    <div class="story-media-block">
+                        <div class="img-placeholder">Matatu Graffiti Art Image</div>
+                        <p class="img-caption">Matatu graffiti art is a statement of identity and culture — Photo: MIC CHEQUE</p>
+                    </div>
+                    <p>For passengers, stepping into a matatu is an experience of its own. Music fills the air, sometimes so loud it becomes part of the ride itself. Conductors call out destinations in fast, rhythmic chants that feel like performance poetry. Young people often see matatus as more than transport—they are social spaces where conversations, trends, and culture are exchanged.</p>
+                    <div class="story-media-block">
+                        <div class="img-placeholder">Matatu Interior Experience Image</div>
+                        <p class="img-caption">Inside a matatu — a sensory experience unlike any other — Photo: MIC CHEQUE</p>
+                    </div>
+                    <p>Behind this creativity is a crucial transport system that keeps Nairobi moving. Every day, millions of people rely on matatus to travel to work, school, markets, and hospitals. Without them, the city's mobility would collapse under pressure.</p>
+                    <div class="story-media-block">
+                        <div class="img-placeholder">Nairobi Public Transport Image</div>
+                        <p class="img-caption">Matatus are the lifeblood of Nairobi's public transport network — Photo: MIC CHEQUE</p>
+                    </div>
+                    <p>But the system operates in a complex environment. Traffic congestion in Nairobi is among the most challenging in the region, often causing long delays during peak hours. Route competition between operators can be intense, with each sacco trying to dominate popular routes. Regulations also evolve frequently, affecting pricing, design, and operation standards.</p>
+                    <div class="story-media-block">
+                        <div class="img-placeholder">Matatu Route Competition Image</div>
+                        <p class="img-caption">Competition on popular routes is fierce among matatu saccos — Photo: MIC CHEQUE</p>
+                    </div>
+                    <p>Despite these issues, matatu culture continues to evolve rather than disappear. New designs appear regularly, each trying to push boundaries in creativity and style. The culture has even influenced fashion, music, and digital content creation, becoming a symbol of urban expression.</p>
+                    <p>For outsiders, it may look chaotic. For locals, it is structured chaos with rhythm and identity. It represents survival, creativity, and movement all at once. Matatus are not just part of Nairobi—they are Nairobi in motion.</p>
+                </div>
+            </article>
 
             <!-- More Stories Section -->
             <div class="section-header">
@@ -654,7 +790,7 @@
 </div>
 
 <!-- Video Section -->
-<section class="video-section">
+<section class="video-section" id="video">
     <div class="section-header" style="max-width: 1280px; margin: 0 auto 2rem; padding: 0 1rem;">
         <h2 class="section-title">Must Watch</h2>
     </div>

@@ -847,7 +847,7 @@
     <div class="header-inner">
         <a href="#" class="logo">
             <div class="logo-mark">
-                <img src="logo_3d_clean.png" alt="MIC CHEQUE" class="logo-3d">
+                <img src="logo_3d_final.png" alt="MIC CHEQUE" class="logo-3d">
             </div>
         </a>
         <div class="search-bar">

@@ -129,17 +129,42 @@
         }
 
         .logo-mark {
-            background: linear-gradient(135deg, var(--color-accent), #ff6b6b);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 4px;
+            width: 70px;
+            height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 900;
+            perspective: 1000px;
+        }
+
+        .logo-3d {
+            width: 100%;
+            height: 100%;
+            animation: spin3d 8s linear infinite;
+            transform-style: preserve-3d;
+            filter: drop-shadow(0 10px 20px rgba(255, 0, 0, 0.3));
+        }
+
+        @keyframes spin3d {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+            25% {
+                transform: rotateX(20deg) rotateY(90deg) rotateZ(10deg);
+            }
+            50% {
+                transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+            }
+            75% {
+                transform: rotateX(-20deg) rotateY(270deg) rotateZ(-10deg);
+            }
+            100% {
+                transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+            }
+        }
+
+        .logo-mark:hover .logo-3d {
+            animation-duration: 4s;
         }
 
         .logo-text h1 {
@@ -854,7 +879,9 @@
 <header class="main-header">
     <div class="header-inner">
         <a href="#" class="logo">
-            <div class="logo-mark">MC</div>
+            <div class="logo-mark">
+                <img src="logo_3d.png" alt="MIC CHEQUE" class="logo-3d">
+            </div>
             <div class="logo-text">
                 <h1>MIC CHEQUE</h1>
                 <p>PROFESSIONAL STORYTELLING</p>

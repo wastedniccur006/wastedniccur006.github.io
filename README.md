@@ -876,7 +876,7 @@
         <!-- Hero Section -->
         <div class="hero-section">
             <div class="hero-main" style="position: relative;">
-                <video width="100%" height="100%" style="object-fit: cover;" poster="hero-arsenal_poster.jpg" class="video-player">
+                <video width="100%" height="100%" style="object-fit: cover;" poster="hero-arsenal-poster.jpg" class="video-player">
                     <source src="Arsenal.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -921,7 +921,7 @@
                 <p>This transformation did not happen overnight. It started in small internet cafés, university dorm rooms, and cramped rented apartments where young people experimented with code, design, and online business ideas. Many had no formal funding, no advanced equipment, and limited mentorship. What they had was curiosity and persistence.</p>
 
                 <div class="article-image">
-                    <img src="tech-story_1.jpg" alt="Nairobi's tech ecosystem">
+                    <img src="tech-story-1.jpg" alt="Nairobi's tech ecosystem">
                     <div class="image-caption">Nairobi's tech ecosystem continues to attract global attention — Photo: MIC CHEQUE</div>
                 </div>
 
@@ -930,14 +930,14 @@
                 <p>A major driver of this growth is mobile technology. With widespread smartphone adoption and mobile money systems, developers have been able to build services that reach millions instantly. This has made Kenya one of the most advanced mobile-first economies in the world.</p>
 
                 <div class="article-image">
-                    <img src="tech-story_2.jpg" alt="Mobile technology in Kenya">
+                    <img src="tech-story-2.jpg" alt="Mobile technology in Kenya">
                     <div class="image-caption">Mobile technology is the backbone of Kenya's digital economy — Photo: MIC CHEQUE</div>
                 </div>
 
                 <p>However, the journey is still far from easy. Many startups struggle with funding gaps, especially at early stages. Others face infrastructure challenges such as inconsistent internet in certain areas or high operational costs. Competition is also intense, with hundreds of new ideas launched every year.</p>
 
                 <div class="article-image">
-                    <img src="tech-story_3.jpg" alt="Startup culture in Nairobi">
+                    <img src="tech-story-3.jpg" alt="Startup culture in Nairobi">
                     <div class="image-caption">Startup culture is thriving despite funding challenges — Photo: MIC CHEQUE</div>
                 </div>
 
@@ -946,7 +946,7 @@
                 <p>What stands out most is the mindset shift. Young innovators are no longer waiting for jobs—they are building them. They are creating platforms that solve local problems while also competing globally. Nairobi is no longer just participating in the digital economy; it is actively shaping it.</p>
 
                 <div class="article-image">
-                    <img src="tech-story_4.jpg" alt="Future of Nairobi tech">
+                    <img src="tech-story-4.jpg" alt="Future of Nairobi tech">
                     <div class="image-caption">The future of Nairobi's tech scene looks brighter than ever — Photo: MIC CHEQUE</div>
                 </div>
             </div>
@@ -969,28 +969,28 @@
                 <p>Every matatu begins its identity long before it hits the road. Artists spend hours designing graffiti-style exteriors, often inspired by pop culture, local heroes, music icons, or social themes. Inside, the transformation continues with LED lights, high-powered sound systems, custom seats, and unique branding that makes each vehicle distinct.</p>
 
                 <div class="article-image">
-                    <img src="matatu-story_1.jpg" alt="Matatu graffiti art">
+                    <img src="matatu-story-1.jpg" alt="Matatu graffiti art">
                     <div class="image-caption">Matatu graffiti art is a statement of identity and culture — Photo: MIC CHEQUE</div>
                 </div>
 
                 <p>For passengers, stepping into a matatu is an experience of its own. Music fills the air, sometimes so loud it becomes part of the ride itself. Conductors call out destinations in fast, rhythmic chants that feel like performance poetry. Young people often see matatus as more than transport—they are social spaces where conversations, trends, and culture are exchanged.</p>
 
                 <div class="article-image">
-                    <img src="matatu-story_2.jpg" alt="Inside a matatu">
+                    <img src="matatu-story-2.jpg" alt="Inside a matatu">
                     <div class="image-caption">Inside a matatu — a sensory experience unlike any other — Photo: MIC CHEQUE</div>
                 </div>
 
                 <p>Behind this creativity is a crucial transport system that keeps Nairobi moving. Every day, millions of people rely on matatus to travel to work, school, markets, and hospitals. Without them, the city's mobility would collapse under pressure.</p>
 
                 <div class="article-image">
-                    <img src="matatu-story_3.jpg" alt="Nairobi public transport">
+                    <img src="matatu-story-3.jpg" alt="Nairobi public transport">
                     <div class="image-caption">Matatus are the lifeblood of Nairobi's public transport network — Photo: MIC CHEQUE</div>
                 </div>
 
                 <p>But the system operates in a complex environment. Traffic congestion in Nairobi is among the most challenging in the region, often causing long delays during peak hours. Route competition between operators can be intense, with each sacco trying to dominate popular routes. Regulations also evolve frequently, affecting pricing, design, and operation standards.</p>
 
                 <div class="article-image">
-                    <img src="matatu-story_4.jpg" alt="Matatu competition">
+                    <img src="matatu-story-4.jpg" alt="Matatu competition">
                     <div class="image-caption">Competition on popular routes is fierce among matatu saccos — Photo: MIC CHEQUE</div>
                 </div>
 
@@ -1006,21 +1006,21 @@
         </div>
         <div class="story-grid">
             <div class="grid-card">
-                <div class="grid-card-img"><img src="more-story_1.jpg" alt="AI Hub"></div>
+                <div class="grid-card-img"><img src="more-story-1.jpg" alt="AI Hub"></div>
                 <div class="grid-card-body">
                     <span class="card-category">Tech</span>
                     <h3 class="card-title">Kenya Launches New AI Research Hub in Nairobi</h3>
                 </div>
             </div>
             <div class="grid-card">
-                <div class="grid-card-img"><img src="more-story_2.jpg" alt="Fashion Week"></div>
+                <div class="grid-card-img"><img src="more-story-2.jpg" alt="Fashion Week"></div>
                 <div class="grid-card-body">
                     <span class="card-category">Lifestyle</span>
                     <h3 class="card-title">Nairobi Fashion Week 2026: Top Trends to Watch</h3>
                 </div>
             </div>
             <div class="grid-card">
-                <div class="grid-card-img"><img src="more-story_3.jpg" alt="Economy"></div>
+                <div class="grid-card-img"><img src="more-story-3.jpg" alt="Economy"></div>
                 <div class="grid-card-body">
                     <span class="card-category">Business</span>
                     <h3 class="card-title">Kenyan Shilling Strengthens Against Major Currencies</h3>
@@ -1034,14 +1034,14 @@
         </div>
         <div class="story-grid">
             <div class="grid-card">
-                <div class="grid-card-img"><img src="new-story_1.jpg" alt="Lamu"></div>
+                <div class="grid-card-img"><img src="new-story-1.jpg" alt="Lamu"></div>
                 <div class="grid-card-body">
                     <span class="card-category">Travel</span>
                     <h3 class="card-title">Hidden Gems: Exploring the Magic of Lamu Island</h3>
                 </div>
             </div>
             <div class="grid-card">
-                <div class="grid-card-img"><img src="new-story_2.jpg" alt="Wellness"></div>
+                <div class="grid-card-img"><img src="new-story-2.jpg" alt="Wellness"></div>
                 <div class="grid-card-body">
                     <span class="card-category">Wellness</span>
                     <h3 class="card-title">Rift Valley Retreats: The Ultimate Wellness Guide</h3>
@@ -1049,8 +1049,8 @@
             </div>
             <div class="grid-card">
                 <div class="grid-card-img" style="position: relative;">
-                    <video width="100%" height="100%" style="object-fit: cover;" poster="new-story_3.jpg" class="video-player">
-                        <source src="Street-food.mp4" type="video/mp4">
+                    <video width="100%" height="100%" style="object-fit: cover;" poster="new-story-3.jpg" class="video-player">
+                        <source src="Streetfood.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="play-btn">▶</div>
@@ -1068,15 +1068,15 @@
         </div>
         <div class="video-grid">
             <div class="video-card">
-                <video width="100%" height="100%" style="object-fit: cover;" poster="video-summertides_poster.jpg" class="video-player">
-                    <source src="summertides-video.mp4" type="video/mp4">
+                <video width="100%" height="100%" style="object-fit: cover;" poster="video-summertides-poster.jpg" class="video-player">
+                    <source src="summertidesvideo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="play-btn">▶</div>
                 <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800; pointer-events: none;">Summertides Festival 2026 Highlights</div>
             </div>
             <div class="video-card">
-                <video width="100%" height="100%" style="object-fit: cover;" poster="video-nyashinski_poster.jpg" class="video-player">
+                <video width="100%" height="100%" style="object-fit: cover;" poster="video-nyashinski-poster.jpg" class="video-player">
                     <source src="video-nyashinski.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -1084,7 +1084,7 @@
                 <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800; pointer-events: none;">Nyashinski Live at Kasarani Stadium</div>
             </div>
             <div class="video-card">
-                <video width="100%" height="100%" style="object-fit: cover;" poster="video-arsenal_poster.jpg" class="video-player">
+                <video width="100%" height="100%" style="object-fit: cover;" poster="video-arsenal-poster.jpg" class="video-player">
                     <source src="Arsenal.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>

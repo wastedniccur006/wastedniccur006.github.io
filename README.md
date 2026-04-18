@@ -877,7 +877,7 @@
         <div class="hero-section">
             <div class="hero-main" style="position: relative;">
                 <video width="100%" height="100%" style="object-fit: cover;" poster="hero-arsenal-poster.jpg" class="video-player">
-                    <source src="Arsenal.mp4" type="video/mp4">
+                    <source src="Arsenal-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="play-btn">▶</div>
@@ -1050,7 +1050,7 @@
             <div class="grid-card">
                 <div class="grid-card-img" style="position: relative;">
                     <video width="100%" height="100%" style="object-fit: cover;" poster="new-story-3.jpg" class="video-player">
-                        <source src="Streetfood.mp4" type="video/mp4">
+                        <source src="Street-food.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="play-btn">▶</div>
@@ -1069,7 +1069,7 @@
         <div class="video-grid">
             <div class="video-card">
                 <video width="100%" height="100%" style="object-fit: cover;" poster="video-summertides-poster.jpg" class="video-player">
-                    <source src="summertidesvideo.mp4" type="video/mp4">
+                    <source src="summertides-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="play-btn">▶</div>
@@ -1085,7 +1085,7 @@
             </div>
             <div class="video-card">
                 <video width="100%" height="100%" style="object-fit: cover;" poster="video-arsenal-poster.jpg" class="video-player">
-                    <source src="Arsenal.mp4" type="video/mp4">
+                    <source src="Arsenal-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="play-btn">▶</div>

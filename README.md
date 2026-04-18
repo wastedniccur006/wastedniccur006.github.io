@@ -573,6 +573,16 @@
             background-color: var(--color-accent);
         }
 
+        .play-btn {
+            cursor: pointer;
+            transition: background-color 0.3s;
+            user-select: none;
+        }
+
+        .play-btn:hover {
+            background-color: var(--color-accent) !important;
+        }
+
         /* ===========================
            SIDEBAR
         =========================== */
@@ -875,11 +885,12 @@
         
         <!-- Hero Section -->
         <div class="hero-section">
-            <div class="hero-main">
-                <video width="100%" height="100%" style="object-fit: cover;" poster="hero-arsenal-poster.jpg" controls>
+            <div class="hero-main" style="position: relative;">
+                <video width="100%" height="100%" style="object-fit: cover;" poster="hero-arsenal-poster.jpg" class="video-player">
                     <source src="hero-arsenal.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="play-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background-color: rgba(255, 0, 0, 0.8); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; cursor: pointer; z-index: 10;">▶</div>
                 <div class="hero-overlay" style="pointer-events: none;">
                     <span class="card-category">Sports</span>
                     <h2 class="hero-title">Arsenal Crowned Premier League Champions 2026: The 22-Year Wait is Over</h2>
@@ -1047,11 +1058,12 @@
                 </div>
             </div>
             <div class="grid-card">
-                <div class="grid-card-img">
-                    <video width="100%" height="100%" style="object-fit: cover;" poster="new-story-3.jpg" controls>
+                <div class="grid-card-img" style="position: relative;">
+                    <video width="100%" height="100%" style="object-fit: cover;" poster="new-story-3.jpg" class="video-player">
                         <source src="new-story-3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                    <div class="play-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background-color: rgba(255, 0, 0, 0.8); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; cursor: pointer; z-index: 10;">▶</div>
                 </div>
                 <div class="grid-card-body">
                     <span class="card-category">Food</span>
@@ -1066,24 +1078,27 @@
         </div>
         <div class="video-grid">
             <div class="video-card">
-                <video width="100%" height="100%" style="object-fit: cover;" poster="video-summertides-poster.jpg" controls>
+                <video width="100%" height="100%" style="object-fit: cover;" poster="video-summertides-poster.jpg" class="video-player">
                     <source src="video-summertides.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="play-btn">▶</div>
                 <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800; pointer-events: none;">Summertides Festival 2026 Highlights</div>
             </div>
             <div class="video-card">
-                <video width="100%" height="100%" style="object-fit: cover;" poster="video-nyashinski-poster.jpg" controls>
+                <video width="100%" height="100%" style="object-fit: cover;" poster="video-nyashinski-poster.jpg" class="video-player">
                     <source src="video-nyashinski.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="play-btn">▶</div>
                 <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800; pointer-events: none;">Nyashinski Live at Kasarani Stadium</div>
             </div>
             <div class="video-card">
-                <video width="100%" height="100%" style="object-fit: cover;" poster="video-arsenal-poster.jpg" controls>
+                <video width="100%" height="100%" style="object-fit: cover;" poster="video-arsenal-poster.jpg" class="video-player">
                     <source src="video-arsenal.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="play-btn">▶</div>
                 <div style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 0.8rem; font-weight: 800; pointer-events: none;">Arsenal: The Road to the 2026 Title</div>
             </div>
         </div>
@@ -1252,6 +1267,64 @@
             tickerEl.style.opacity = 1;
         }, 300);
     }, 5000);
+
+    // Video playback control - only one video plays at a time
+    const videoPlayers = document.querySelectorAll('.video-player');
+    const playButtons = document.querySelectorAll('.play-btn');
+    let currentlyPlayingVideo = null;
+
+    videoPlayers.forEach((video, index) => {
+        // Add click handler to video element
+        video.addEventListener('click', function(e) {
+            e.preventDefault();
+            handleVideoClick(video);
+        });
+
+        // Add click handler to play button
+        if (playButtons[index]) {
+            playButtons[index].addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                handleVideoClick(video);
+            });
+        }
+
+        // Stop other videos when this one starts playing
+        video.addEventListener('play', function() {
+            videoPlayers.forEach(otherVideo => {
+                if (otherVideo !== video && !otherVideo.paused) {
+                    otherVideo.pause();
+                }
+            });
+            currentlyPlayingVideo = video;
+            
+            // Hide play button when playing
+            const playBtn = video.parentElement.querySelector('.play-btn');
+            if (playBtn) playBtn.style.display = 'none';
+        });
+
+        // Show play button when paused
+        video.addEventListener('pause', function() {
+            const playBtn = video.parentElement.querySelector('.play-btn');
+            if (playBtn) playBtn.style.display = 'flex';
+        });
+    });
+
+    function handleVideoClick(video) {
+        // Stop all other videos
+        videoPlayers.forEach(otherVideo => {
+            if (otherVideo !== video) {
+                otherVideo.pause();
+            }
+        });
+
+        // Toggle play/pause for clicked video
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
 </script>
 
 </body>

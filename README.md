@@ -877,7 +877,7 @@
         <div class="hero-section">
             <div class="hero-main" style="position: relative;">
                 <video width="100%" height="100%" style="object-fit: cover;" poster="hero-arsenal-poster.jpg" class="video-player">
-                    <source src="Arsenal-video.mp4" type="video/mp4">
+                    <source src="Arsenal-crowned.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="play-btn">▶</div>
@@ -1085,7 +1085,7 @@
             </div>
             <div class="video-card">
                 <video width="100%" height="100%" style="object-fit: cover;" poster="video-arsenal-poster.jpg" class="video-player">
-                    <source src="Arsenal-video.mp4" type="video/mp4">
+                    <source src="Arsenal-road.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="play-btn">▶</div>

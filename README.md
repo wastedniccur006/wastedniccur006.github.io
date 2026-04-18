@@ -129,7 +129,7 @@
         }
 
         .logo-mark {
-            width: 180px; /* 4x bigger (from ~45px to 180px) */
+            width: 180px;
             height: 180px;
             display: flex;
             align-items: center;
@@ -158,7 +158,7 @@
         }
 
         .logo-text {
-            display: none; /* Hide text as it's now in the 3D logo */
+            display: none;
         }
 
         .search-bar {
@@ -313,7 +313,7 @@
 
         .story-card {
             display: flex;
-            height: 130px;
+            height: 195px;
             background-color: var(--color-bg-secondary);
             border-radius: 4px;
             overflow: hidden;
@@ -877,7 +877,7 @@
         <div class="hero-section">
             <div class="hero-main" style="position: relative;">
                 <video width="100%" height="100%" style="object-fit: cover;" poster="hero-arsenal_poster.jpg" class="video-player">
-                    <source src="hero-arsenal.mp4" type="video/mp4">
+                    <source src="Arsenal.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="play-btn">▶</div>
@@ -1050,7 +1050,7 @@
             <div class="grid-card">
                 <div class="grid-card-img" style="position: relative;">
                     <video width="100%" height="100%" style="object-fit: cover;" poster="new-story_3.jpg" class="video-player">
-                        <source src="new-story_3.mp4" type="video/mp4">
+                        <source src="Street-food.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="play-btn">▶</div>
@@ -1069,7 +1069,7 @@
         <div class="video-grid">
             <div class="video-card">
                 <video width="100%" height="100%" style="object-fit: cover;" poster="video-summertides_poster.jpg" class="video-player">
-                    <source src="video-summertides.mp4" type="video/mp4">
+                    <source src="summertides-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="play-btn">▶</div>
@@ -1085,7 +1085,7 @@
             </div>
             <div class="video-card">
                 <video width="100%" height="100%" style="object-fit: cover;" poster="video-arsenal_poster.jpg" class="video-player">
-                    <source src="video-arsenal.mp4" type="video/mp4">
+                    <source src="Arsenal.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="play-btn">▶</div>
